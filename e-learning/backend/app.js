@@ -5,12 +5,7 @@ import jwt from "jsonwebtoken";
 
 const app = express();
 
-const SECRET_KEY = "your_secret_key";
-
-const createJSONToken = (email) => {
-    return jwt.sign({ email }, SECRET_KEY, { expiresIn: "1h" });
-  };
-
+app.use(express.static("./front-image-courses"));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
