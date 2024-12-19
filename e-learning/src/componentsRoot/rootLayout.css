@@ -1,0 +1,112 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow: hidden; /* Evita scroll indesejado */
+}
+
+
+
+/* Header fixo no topo */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    padding: 0 20px; /* Espaçamento nos lados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 40px;
+    width: auto;
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+
+.header-icons {
+display: flex;
+gap: 30px; /* Espaçamento entre ícones */
+margin-right: 20px;
+}
+
+.header-icons svg {
+cursor: pointer; /* Transforma o ícone em interativo */
+transition: color 0.3s ease-in-out;
+}
+
+.header-icons svg:hover {
+color: #00bcd4; /* Cor ao passar o mouse */
+}
+
+
+/* Menu lateral fixo */
+.sidebar {
+  background-color: #222;
+  color: white;
+  width: 250px;
+  height: calc(100vh - 100px); /* Ajusta para header e footer */
+  position: fixed;
+  top: 60px; /* Após o Header */
+  left: 0;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+
+
+.main-content {
+  margin-top: 60px; /* Evita que o Header cubra o conteúdo */
+  margin-left: 250px; /* Evita que a Sidebar cubra o conteúdo */
+  padding: 20px;
+  background-color: #f4f4f4;
+  position: relative;
+  z-index: 800; /* Menor prioridade */
+  overflow: auto; /* Permite scroll se necessário */
+  box-sizing: fit-content;
+}
+
+/* Footer fixo no rodapé */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 10px;
+}

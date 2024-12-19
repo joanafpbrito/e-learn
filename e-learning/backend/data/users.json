@@ -1,0 +1,26 @@
+[
+ {
+    "name":"Bruno Andrade",
+    "email":"bruno@bruno.bruno",
+    "password": "bruno",
+    "role":"admin"
+ },
+ {
+    "name":"Jorge Miguel",
+    "email":"jorge@jorge.jorge",
+    "password": "jorge",
+    "role":"user"
+ },
+ {
+    "name":"Patrícia Marques",
+    "email":"patricia@patricia.patricia",
+    "password": "patricia",
+    "role":"180"
+ },
+ {
+    "name":"Joana Brito",
+    "email":"joana@joana.joana",
+    "password": "joana",
+    "role":"teacher"
+ }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "course1",
+        "title": "Curso Um",
+        "image": {
+          "src": "course-one.jpg",
+          "alt": "Curso Um"
+        },
+        "video": {
+          "src":"courses-videos/course-one.mp4"
+        },
+        "description": "O curso um é muito bom"
+    },
+    {
+        "id": "course2",
+        "title": "Curso Dois",
+        "image": {
+          "src": "course-two.jpg",
+          "alt": "Curso Dois"
+        },
+        "video": {
+          "src":"courses-videos/course-two.mp4"
+        },
+        "description": "O curso dois é muito bom"
+    },
+    {
+        "id": "course3",
+        "title": "Curso Três",
+        "image": {
+          "src": "course-three.jpg",
+          "alt": "Curso Três"
+        },
+        "video": {
+          "src":"courses-videos/course-three.mp4"
+        },
+        "description": "O curso três é muito bom"
+    }
+]
