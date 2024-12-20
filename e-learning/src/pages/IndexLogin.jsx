@@ -30,7 +30,7 @@ function IndexLogin () {
     .then ((data) => {
         console.log(data);
         localStorage.setItem('token', data.token);
-        localStorage.setItem('role', data.role);
+        localStorage.setItem('name', data.name);
         localStorage.setItem('role', data.role)
             if ( data.role === 'admin') {
                 navigate('/admin');   

@@ -3,6 +3,14 @@ import bodyParser from "body-parser";
 import express from "express";
 import jwt from "jsonwebtoken";
 
+
+const SECRET_KEY = "your_secret_key";
+
+// Generate a JWT token
+const createJSONToken = (email) => {
+  return jwt.sign({ email }, SECRET_KEY, { expiresIn: "1h" });
+};
+
 const app = express();
 app.use(express.static("./data/front-image-courses/"));
 app.use(bodyParser.json());
