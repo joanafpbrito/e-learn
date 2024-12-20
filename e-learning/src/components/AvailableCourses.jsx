@@ -16,7 +16,7 @@ function AvailableCourses () {
         <ul>
           {availableCourses.map((c) => (
             <li key={c.id}>
-                <a href="/"><img src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt}/>
+                <a href="/"><img style={{width:'100px'}} src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt}/>
                 <h3>{c.title}</h3></a>
             </li>
           ))}

@@ -4,7 +4,7 @@ import express from "express";
 import jwt from "jsonwebtoken";
 
 const app = express();
-app.use(express.static("./data/front-image-courses"));
+app.use(express.static("./data/front-image-courses/"));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
