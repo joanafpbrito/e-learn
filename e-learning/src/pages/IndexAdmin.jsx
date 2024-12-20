@@ -1,10 +1,10 @@
-import AvailableCourses from "../components/AvailableCourses";
+import CoursesList from "../components/CoursesList";
 
 function IndexAdmin () {
     return (
         <>
         <p>ola Admin</p>
-        <AvailableCourses/>
+        <CoursesList/>
         </>
     )
 }
