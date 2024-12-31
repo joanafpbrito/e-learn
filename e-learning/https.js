@@ -13,3 +13,21 @@ export function getAvailableCourses(){
         return availableCourses;
 
 }
+
+export function getCourseDetails(id){
+  const[courseDetails, setCourseDetails] = useState([]);
+
+  useEffect(() =>
+      {
+        fetch('http://localhost:3700/coursesModules')
+        .then((response) => { return response.json()})
+        .then((responseData) => { 
+          // const details = responseData.coursesModules.find((i) => i.id === id);
+          setCourseDetails(responseData.coursesModules);
+         });
+      },
+      []);
+      return courseDetails;
+
+}
+

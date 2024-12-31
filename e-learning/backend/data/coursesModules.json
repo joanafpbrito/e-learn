@@ -1,0 +1,61 @@
+[
+    {
+        "id": "001",
+        "modules": [
+        {
+            "id-mod": "001-01",
+            "subtitle": "Modulo 1",
+            "text": "BLABLABLA",
+            "video": {
+                "src":"courses-videos/course-one.mp4"
+                    }
+        },
+        {
+            "id-mod": "001-02",
+            "subtitle": "Modulo 2",
+            "text": "BLABLABLA",
+            "video": {
+                "src":"courses-videos/course-one.mp4"
+                    }
+        },
+        {
+            "id-mod": "001-03",
+            "subtitle": "Modulo 3",
+            "text": "BLABLABLA",
+            "video": {
+                "src":"courses-videos/course-one.mp4"
+                    }
+        }
+        ]
+    },
+    {
+        "id": "002",
+        "modules": [
+        {
+            "id-mod": "001-01",
+            "subtitle": "Modulo 1",
+            "text": "BLABLABLA",
+            "video": {
+                "src":"courses-videos/course-one.mp4"
+                    }
+        },
+        {
+            "id-mod": "001-02",
+            "subtitle": "Modulo 2",
+            "text": "BLABLABLA",
+            "video": {
+                "src":"courses-videos/course-one.mp4"
+                    }
+        },
+        {
+            "id-mod": "001-03",
+            "subtitle": "Modulo 3",
+            "text": "BLABLABLA",
+            "video": {
+                "src":"courses-videos/course-one.mp4"
+                    }
+        }
+        ]
+    }
+
+]

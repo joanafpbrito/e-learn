@@ -13,6 +13,7 @@ const createJSONToken = (email) => {
 
 const app = express();
 app.use(express.static("./data/front-image-courses/"));
+app.use(express.static("./data/courses-videos/"))
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
@@ -76,6 +77,13 @@ app.get("/courses", async (req, res) => {
   const content = await fs.readFile("./data/courses.json");
   const coursesData = JSON.parse(content);
   res.status(200).json({ coursesData });
+});
+
+
+app.get("/coursesModules", async (req, res) => {
+  const content = await fs.readFile("./data/coursesModules.json");
+  const coursesModules = JSON.parse(content);
+  res.status(200).json({ coursesModules });
 });
 
 
