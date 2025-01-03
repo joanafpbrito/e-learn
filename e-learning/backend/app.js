@@ -63,7 +63,7 @@ app.post("/login", async (req, res) => {
 
   const user = {
     token: token,
-    name: login.name,
+    name: login.firstName,
     role: login.role,
   };
 
