@@ -5,8 +5,9 @@ import ErrorPage from './pages/ErrorPage';
 import Index180 from './pages/Index180';
 import IndexAdmin from './pages/IndexAdmin';
 import IndexLogin from './pages/IndexLogin'
-import IndexTeacher from './pages/indexTeacher';
+import IndexTeacher from './pages/IndexTeacher';
 import IndexUser from './pages/IndexUser';
+import IndexModules from './pages/IndexModules';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
  
 
@@ -25,6 +26,7 @@ const ROUTER = createBrowserRouter([
   {path: '/admin', element:<IndexAdmin/>},
   {path: '/teacher', element: <IndexTeacher/>},
   {path: '/user', element: <IndexUser/>},
+  {path: '/modules', element: <IndexModules/>}
   
 ]},
 ])

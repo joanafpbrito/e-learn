@@ -1,6 +1,6 @@
 import { getCourseDetails } from "../../https";
 
-function CoursePage() {
+function CourseDetails(id) {
 
 const details = getCourseDetails();
 console.log(details);
@@ -9,14 +9,14 @@ console.log(details);
     return  (
         <div>
             olá página de curso
-            {details.map((course) => (
+            {details.find((course) => (
                 <div key= {course.id} >
                     <h2>{course.id}</h2>
                     {course.modules.map((m) => (
                         <div key={m["id-mod"]}>
                             <h3>{m.subtitle}</h3>
                             <p>{m.text}</p>
-                            
+                            <video src={m.video.src}></video>
                         </div>
 
                     )
@@ -32,4 +32,4 @@ console.log(details);
     );
 }
 
-export default CoursePage;
+export default CourseDetails;

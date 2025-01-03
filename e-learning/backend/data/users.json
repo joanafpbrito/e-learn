@@ -1,26 +1,47 @@
 [
- {
-    "name":"Bruno Andrade",
-    "email":"bruno@bruno.bruno",
+  {
+    "email": "bruno@bruno.bruno",
     "password": "bruno",
-    "role":"admin"
- },
- {
-    "name":"Jorge Miguel",
-    "email":"jorge@jorge.jorge",
+    "company": "CESAE Digital",
+    "department": "Formação",
+    "firstName": "Bruno",
+    "lastName": "Andrade",
+    "role": "admin"
+  },
+  {
+    "email": "jorge@jorge.jorge",
     "password": "jorge",
-    "role":"user"
- },
- {
-    "name":"Patrícia Marques",
-    "email":"patricia@patricia.patricia",
+    "company": "CESAE Digital",
+    "department": "Formação",
+    "firstName": "Jorge",
+    "lastName": "Silva",
+    "role": "teacher"
+  },
+  {
+    "email": "patricia@patricia.patricia",
     "password": "patricia",
-    "role":"180"
- },
- {
-    "name":"Joana Brito",
-    "email":"joana@joana.joana",
+    "company": "CESAE Digital",
+    "department": "Formação",
+    "firstName": "Patricia",
+    "lastName": "Marques",
+    "role": "180"
+  },
+  {
+    "email": "joana@joana.joana",
     "password": "joana",
-    "role":"teacher"
- }
+    "company": "CESAE Digital",
+    "department": "Formação",
+    "firstName": "Joana",
+    "lastName": "Brito",
+    "role": "user"
+  },
+  {
+    "email": "sara@sara.sara",
+    "password": "08it21nn8e",
+    "company": "CESAE Digital",
+    "department": "Formação",
+    "firstName": "Sara",
+    "lastName": "Monteiro",
+    "role": "teacher"
+  }
 ]

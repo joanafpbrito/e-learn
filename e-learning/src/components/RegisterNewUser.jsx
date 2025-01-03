@@ -28,7 +28,7 @@ function RegisterNewUser() {
 
       const user = {
         email: data.email,
-        password: data.password,
+        password: password,
         company: data.company,
         department: data.department,
         firstName: data['first-name'],
