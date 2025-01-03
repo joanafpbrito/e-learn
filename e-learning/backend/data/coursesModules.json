@@ -1,9 +1,8 @@
 [
-    {
-        "id": "001",
-        "modules": [
+    
         {
-            "id-mod": "001-01",
+            "id-course": "001",
+            "id-mod": "01",
             "subtitle": "Modulo 1",
             "text": "BLABLABLA",
             "video": {
@@ -11,7 +10,8 @@
                     }
         },
         {
-            "id-mod": "001-02",
+            "id-course": "001",
+            "id-mod": "02",
             "subtitle": "Modulo 2",
             "text": "BLABLABLA",
             "video": {
@@ -19,20 +19,17 @@
                     }
         },
         {
-            "id-mod": "001-03",
+            "id-course": "001",
+            "id-mod": "03",
             "subtitle": "Modulo 3",
             "text": "BLABLABLA",
             "video": {
                 "src":"courses-videos/course-one.mp4"
                     }
-        }
-        ]
-    },
-    {
-        "id": "002",
-        "modules": [
+        },
         {
-            "id-mod": "001-01",
+            "id-course": "002",
+            "id-mod": "04",
             "subtitle": "Modulo 1",
             "text": "BLABLABLA",
             "video": {
@@ -40,22 +37,15 @@
                     }
         },
         {
-            "id-mod": "001-02",
+            "id-course": "002",
+            "id-mod": "05",
             "subtitle": "Modulo 2",
             "text": "BLABLABLA",
             "video": {
                 "src":"courses-videos/course-one.mp4"
                     }
-        },
-        {
-            "id-mod": "001-03",
-            "subtitle": "Modulo 3",
-            "text": "BLABLABLA",
-            "video": {
-                "src":"courses-videos/course-one.mp4"
-                    }
         }
-        ]
-    }
+        
+
 
 ]

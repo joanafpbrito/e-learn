@@ -1,16 +1,20 @@
 import { getAvailableCourses, getCourseDetails } from "../../https";
 import { useState } from "react";
 import CourseDetails from "./CourseDetails";
+import { useNavigate } from "react-router-dom";
 
 function CoursesList () {
     const availableCourses = getAvailableCourses();
 
     const [selectedCourse, setSelectedCourse] = useState(null);
 
+    const navigate = useNavigate();
+
     function handleSelectedCourse(id) {
-      const courseDetails = getCourseDetails();
-      setSelectedCourse(courseDetails);
-      console.log(courseDetails.id);
+      navigate('/modules' + id);
+      // const courseDetails = getCourseDetails();
+      // setSelectedCourse(courseDetails);
+      console.log(id);
     }
     
     if (selectedCourse) {

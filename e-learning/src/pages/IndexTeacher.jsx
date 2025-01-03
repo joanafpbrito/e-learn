@@ -6,7 +6,7 @@ function IndexTeacher () {
     return (
         <>
         <p>ola {userName ? userName : "180"}</p>
-        <CoursePage/>
+        {/* <CoursePage/> */}
         </>
     )
 }
