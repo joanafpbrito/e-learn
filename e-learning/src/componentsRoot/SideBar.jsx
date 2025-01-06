@@ -4,6 +4,7 @@ function SideBar () {
     return (
         <aside className="sidebar">
             <div>
+                
                 <h2>olá sidebar</h2>
                 <hr />
                 <p>Aqui queremos um menu lateral com as funcionalidades</p>
