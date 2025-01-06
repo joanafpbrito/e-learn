@@ -9,7 +9,7 @@ function RootLayout () {
         <>
         
             <Header/>
-            <SideBar/>
+            
             <div className="main-content"> <Outlet /> </div>
             <Footer/>
         </>

@@ -1,13 +1,13 @@
-import CoursePage from "../components/CoursePage";
+import Banner from "../componentsRoot/Banner";
+
 
 function IndexTeacher () {
     const userName=localStorage.getItem("name");
-    console.log(userName);
     return (
-        <>
-        <p>ola {userName ? userName : "180"}</p>
-        {/* <CoursePage/> */}
-        </>
+       <div> 
+       <p>ola {userName ? userName : "180"}</p> 
+       <Banner/>
+       </div>
     )
 }
 
