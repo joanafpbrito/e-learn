@@ -99,6 +99,13 @@ color: #6BE32B; /* Cor ao passar o mouse */
   box-sizing: fit-content;
 }
 
+/** Banner **/
+.banner {
+  width: 100%;
+  margin: 0px;
+
+}
+
 /* Footer fixo no rodapé */
 .footer {
   background-color: #333;
