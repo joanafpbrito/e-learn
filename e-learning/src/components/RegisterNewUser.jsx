@@ -4,17 +4,19 @@ import { useNavigate } from 'react-router-dom';
 function RegisterNewUser() {
   const [password, setPassword] = useState();
   const navigate = useNavigate();
-
-    // function generatePass() {
-    //   const pass = Math.random().toString(36).slice(-10);
-    //   return pass;
-    // }
+  const [selectedLimits, setSelectedLimits] = useState([]);
 
     function generatePassword() {
       const pass = Math.random().toString(36).slice(-10);
       setPassword(pass);
-
     }
+
+    function handleCheckboxChange(e) {
+      const value = parseInt(e.target.value, 10);
+      setSelectedLimits((prev) =>
+        e.target.checked ? [...prev, value] : prev.filter((num) => num !== value)
+      );
+    };
 
     function handleSubmit(event){
       event.preventDefault();
@@ -34,7 +36,8 @@ function RegisterNewUser() {
         firstName: data['first-name'],
         lastName: data['last-name'],
         role: data.role,
-        
+        ableToRegister: data['able-to-register'],
+        howMany: selectedLimits
       }
 
       const response = fetch("http://localhost:3700/signup",
@@ -54,7 +57,7 @@ function RegisterNewUser() {
 
     return (
       <form onSubmit={handleSubmit}>
-        <h2>Registar Novo Usuário</h2>
+        <h2>Novo Registo</h2>
         <p>🌑 180 Academy - a formar o futuro 🚀</p>
         <hr />
         <div>
@@ -71,7 +74,7 @@ function RegisterNewUser() {
             <label htmlFor="department">Departamento</label> <input type="text" id="department" name="department" />
           </div>
         </div>
-  
+        <hr />
         <div>
           <label htmlFor="phone">Tipo User</label>
           <select id="role" name="role" required>
@@ -81,6 +84,23 @@ function RegisterNewUser() {
             <option value="teacher">Formador</option>
           </select>
         </div>
+        <div>
+          <p>Pode registar novos utilizadores?</p>
+          <label htmlFor="able-to-register">
+            <input type="checkbox" id="able-to-register" name="able-to-register" value="yes" />Sim
+          </label>
+          <label htmlFor="able-to-register">
+            <input type="checkbox" id="able-to-register" name="able-to-register" value="no" />Não
+          </label>
+        </div>
+        <div>
+        <p>Quantos?</p>
+        {[5, 10, 15, 20, 25].map((limit) => (
+          <label key={limit}>
+            <input type="checkbox" id="how-many" name="how-many" value={limit} onChange={handleCheckboxChange}/> {limit}
+          </label>
+        ))}
+      </div>
 
         <hr />
 
@@ -94,7 +114,7 @@ function RegisterNewUser() {
           </div>
           
         </div>
-        <p><button type="submit">Register New Employee</button></p>
+        <p><button type="submit">Registar Novo User</button></p>
       </form>
     );
   }
