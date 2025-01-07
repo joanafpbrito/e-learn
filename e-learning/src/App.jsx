@@ -26,7 +26,7 @@ const ROUTER = createBrowserRouter([
   {path: '/admin', element:<IndexAdmin/>},
   {path: '/teacher', element: <IndexTeacher/>},
   {path: '/user', element: <IndexUser/>},
-  {path: '/modules', element: <IndexModules/>}
+  {path: "/admin/modules/:id", element: <IndexModules/>}
   
 ]},
 ])

@@ -1,7 +1,7 @@
-import { getAvailableCourses, getCourseDetails } from "../../https";
+import { getAvailableCourses } from "../../https";
 import { useState } from "react";
-import CourseDetails from "./CourseDetails";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CoursesList () {
     const availableCourses = getAvailableCourses();
@@ -10,27 +10,8 @@ function CoursesList () {
 
     const navigate = useNavigate();
 
-    function handleSelectedCourse(id) {
-      navigate('/modules' + id);
-      // const courseDetails = getCourseDetails();
-      // setSelectedCourse(courseDetails);
-      console.log(id);
-    }
     
-    if (selectedCourse) {
-      return (
-        <>
-        <div>
-          <CourseDetails
-          id = {selectedCourse.id}
-          />
-          <h2> {selectedCourse.id} </h2>
-          <p> ola curso</p>
-          <button onClick={() => setSelectedCourse(null)}>Voltar</button>
-        </div>
-        </>
-      )
-    }
+
 
     
     return(
@@ -40,10 +21,12 @@ function CoursesList () {
         {availableCourses.length > 0 && (
         <ul>
           {availableCourses.map((c) => (
-            <li key={c.id} >
-                <img onClick={() => handleSelectedCourse(c.id)} style={{width:'200px'}} src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt}/>
+              <Link to={`modules/${c.id}`}>
+                <li key={c.id} >
+                <img  style={{width:'200px'}} src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt}/>
                 <h3>{c.title}</h3>
-            </li>
+                </li> 
+              </Link>
           ))}
         </ul>
       )}
