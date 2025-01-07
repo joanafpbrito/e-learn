@@ -9,8 +9,6 @@ import IndexTeacher from './pages/IndexTeacher';
 import IndexUser from './pages/IndexUser';
 import IndexModules from './pages/IndexModules';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
- 
-
 
 const ROUTER = createBrowserRouter([
   {path: '/', element:<IndexLogin/>},
@@ -30,13 +28,8 @@ const ROUTER = createBrowserRouter([
   
 ]},
 ])
-  
-      
-  
 
 function App() {
- 
-
   return (<RouterProvider router={ROUTER}/> )
 }
 
