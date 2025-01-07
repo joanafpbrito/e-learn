@@ -43,5 +43,39 @@
     "firstName": "Sara",
     "lastName": "Monteiro",
     "role": "teacher"
+  },
+  {
+    "email": "teste@teste.teste",
+    "password": "iy2s2w7v78",
+    "company": "teste",
+    "department": "teste",
+    "firstName": "teste",
+    "lastName": "teste",
+    "role": "admin",
+    "ableToRegister": "on",
+    "howMany": [
+      5
+    ]
+  },
+  {
+    "email": "puskas@puskas.puskas",
+    "password": "ojq5e2aanq",
+    "company": "puskas",
+    "department": "puskas",
+    "firstName": "puskas",
+    "lastName": "puskas",
+    "role": "user",
+    "howMany": []
+  },
+  {
+    "email": "queen@queen.queen",
+    "password": "ylmqqb6cmb",
+    "company": "queen",
+    "department": "queen",
+    "firstName": "queen",
+    "lastName": "queen",
+    "role": "user",
+    "ableToRegister": "no",
+    "howMany": []
   }
 ]

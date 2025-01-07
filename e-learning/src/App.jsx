@@ -9,8 +9,6 @@ import IndexTeacher from './pages/IndexTeacher';
 import IndexUser from './pages/IndexUser';
 import IndexModules from './pages/IndexModules';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
- 
-
 
 const ROUTER = createBrowserRouter([
   {path: '/', element:<IndexLogin/>},
@@ -26,17 +24,12 @@ const ROUTER = createBrowserRouter([
   {path: '/admin', element:<IndexAdmin/>},
   {path: '/teacher', element: <IndexTeacher/>},
   {path: '/user', element: <IndexUser/>},
-  {path: '/modules', element: <IndexModules/>}
+  {path: "/admin/modules/:id", element: <IndexModules/>}
   
 ]},
 ])
-  
-      
-  
 
 function App() {
- 
-
   return (<RouterProvider router={ROUTER}/> )
 }
 

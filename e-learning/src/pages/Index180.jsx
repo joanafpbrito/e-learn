@@ -33,7 +33,7 @@ function Index180 () {
                 <br /> 
             </div>
         </aside>
-        <p>ola {userName ? userName : "180"}</p>
+        
 
         {banner && 
             <div>

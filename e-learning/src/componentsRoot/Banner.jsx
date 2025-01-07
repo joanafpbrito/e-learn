@@ -1,4 +1,3 @@
-import banner180 from '../assets/banner180.png';
 import './rootLayout.css';
 
 function Banner() {
@@ -20,15 +19,18 @@ function Banner() {
 
 
     return (
-
-        <div className='banner'>
-            <img src={banner180} alt="image-banner" />
-            <h2>Olá, {userName ? userName : "180"}!</h2>
-            {message}
-        </div>
-
+        <>
+            <div className='MainDivBanner'>
+                <div className='bannerMSG'>
+                    <h2>Olá, {userName ? userName : "180"}!</h2>
+                    {message}
+                </div>
+                <div className="bannerIMG">
+                    <img src="src\assets\wink-white.png" alt="" />
+                </div>
+            </div>
+        </>
     )
-
 }
 
 export default Banner;

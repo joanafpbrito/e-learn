@@ -21,10 +21,7 @@ export function getCourseDetails(id){
       {
         fetch('http://localhost:3700/coursesModules')
         .then((response) => { return response.json()})
-        .then((responseData) => { 
-          // const details = responseData.coursesModules.find((i) => i.id === id);
-          setCourseDetails(responseData.coursesModules);
-         });
+        .then((responseData) => { setCourseDetails(responseData.coursesModules); });
       },
       []);
       return courseDetails;

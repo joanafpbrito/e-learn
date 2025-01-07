@@ -6,6 +6,7 @@ function IndexUser () {
        <div> 
        <p>ola {userName ? userName : "180"}</p> 
        <Banner/>
+       <CourseDetails />
        </div>
     )
 }
