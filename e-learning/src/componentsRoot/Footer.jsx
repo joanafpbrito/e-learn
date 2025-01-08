@@ -1,9 +1,9 @@
-import "./rootLayout.css";
+import '../index.css'
 
 function Footer () {
     return (
         <footer className= "footer">
-            <p> 2025 | CESAE Digital | 180 Consulting | 180 Academy | J2PB</p>
+            <p>© 180 Consulting | 180 Academy | CESAE Digital | Todos os direitos reservados | Desenvolvido por J2PB</p>
             
         </footer>
     )

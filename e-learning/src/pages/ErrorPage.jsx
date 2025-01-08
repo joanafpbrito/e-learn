@@ -1,13 +1,12 @@
 function ErrorPage () {
     return (
        
-        <div className="Error">
-        <h1>Estás perdido?</h1>
-        <p>We searched high and low but couldn't find what you're looking for.</p>
-        {/* alterar para pt */}
-        <p>Let's find a better place for you to go.</p>
-        <a href="/"><button >Go Home</button></a> 
-        {/* Mudar o site para onde volta */}
+        <div className="errorPage">
+        <h1>404: Página não encontrada</h1>
+        <br />
+        <p> <b>Oops! Não conseguimos encontrar a página que procura.</b></p>
+        <p><b></b>Por favor, volte ao início ou explore os nossos cursos</p>
+        {/* <a href="/"><button >Início</button></a>  */}
         <img src="src\assets\ErrorPage.png" alt="" />
         </div>
     )

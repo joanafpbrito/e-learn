@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Logout from "../components/Logout"
-import "./rootLayout.css";
+import '../index.css'
 import { AiOutlineLogout } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";

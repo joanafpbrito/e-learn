@@ -1,4 +1,6 @@
-/* Definições Gerais para a Fonte */
+/**CSS DEFINIÇÕES GERAIS DA PÁG (TUDO O QUE APARECE EM TODAS) */
+
+/** Definições Gerais para a Fonte */
 body {
   font-family: 'Montserrat', sans-serif; /* Fonte principal */
   font-size: 16px; /* Tamanho base */
@@ -8,7 +10,7 @@ body {
   padding: 0;
 }
 
-/* Estilo para Cabeçalhos */
+/** Estilo Geral para Títulos */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif; /* Usar a mesma fonte para consistência */
   color: #222; /* Cor ligeiramente mais escura para destacar */
@@ -17,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-/* Tamanhos dos Cabeçalhos */
+/** Tamanhos dos Títulos */
 h1 {
   font-size: 2.5rem; /* Tamanho grande para títulos principais */
   font-weight: 700; /* Negrito */
@@ -48,14 +50,14 @@ h6 {
   font-weight: 400;
 }
 
-/* Parágrafos */
+/** Parágrafos */
 p {
   font-size: 1rem; /* Tamanho base para leitura confortável */
   margin-bottom: 1rem; /* Espaço entre parágrafos */
   color: #555; /* Cor ligeiramente mais clara que os cabeçalhos */
 }
 
-/* Estilo para Links */
+/** Estilo para Links */
 a {
   color: #6BE32B; /* Verde alface */
   text-decoration: none; /* Remove o sublinhado */
@@ -64,3 +66,78 @@ a {
 a:hover {
   text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
+
+/** Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F6F6F6;
+  color: #555;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 9%;
+  width: 100%;
+  padding: 0 20px; /* Espaçamento nos lados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.logo img {
+  max-height: 50px;
+  width: auto;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.header-icons { 
+  display: flex;
+  gap: 20px; /* Espaçamento entre ícones */
+  margin-right: 20px;
+}
+
+.header-icons svg {
+  height: 20px; 
+  width: 20px;
+  cursor: pointer; /* Transforma o ícone em interativo */
+  transition: color 0.3s ease-in-out;
+  color: #008000;
+}
+
+.header-icons svg:hover {
+  color: #6BE32B; /* Cor ao passar o mouse */
+}
+
+/** Footer */
+.footer {
+  background-color: #F6F6F6; /* Cor de fundo suave */
+  color: #555; /* Cor do texto */
+  text-align: left; /* Centraliza o texto */
+  font-size: 10px; /* Tamanho do texto ajustado */
+  position: fixed; /* Fixa o footer no final da página */
+  bottom: 0; /* Alinha ao fundo */
+  left: 0; /* Estende para a esquerda */
+  right: 0; /* Estende para a direita */
+  height: 40px; /* Altura do footer */
+  padding: 5px 20px; /* Espaçamento interno */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+  z-index: 10; /* Garantir que fique acima de outros elementos */
+}
+
+/** Responsividade */
+@media (min-width: 320px) and (max-width: 767px) {   
+  .header{ 
+    height: 7%; 
+  } 
+  
+  .header-icons{ 
+    gap:5px; 
+    margin-right: 5px; 
+  }
+
+  .footer p{ 
+    font-size: 8px; 
+  } 
+} 
