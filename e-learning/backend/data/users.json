@@ -77,5 +77,18 @@
     "role": "user",
     "ableToRegister": "no",
     "howMany": []
+  },
+  {
+    "email": "tinoco@tinoco.tinoco",
+    "password": "e4a7y76g4k",
+    "company": "tinoco",
+    "department": "tinoco",
+    "firstName": "tinoco",
+    "lastName": "tinoco",
+    "role": "admin",
+    "ableToRegister": "yes",
+    "howMany": [
+      15
+    ]
   }
 ]

@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Banner from "../componentsRoot/Banner";
-import RegisterNewUser from "../components/RegisterNewUser";
-import CoursesList from "../components/CoursesList";
+import RegisterNewUser from "./RegisterNewUser";
 
-function Index180 () {
+
+function Admin () {
     const userName=localStorage.getItem("name");
     const [banner, setBanner] = useState(true);
     const [newUser, setNewUser] = useState();
-    const [courseList, setCourseList] =useState();
+    
 
     function showRegisterNewUser () {
       setNewUser(true);
@@ -15,25 +16,20 @@ function Index180 () {
       setCourseList(false);
     }
 
-    function showCourseList() {
-        setCourseList(true);
-        setBanner(false);
-        setNewUser(false);
-    }
+
     return (
         <>
         <aside className="sidebar">
             <div>
-                <p onClick={showRegisterNewUser} > <strong>Register New User</strong> </p>
+                <p  > <strong>Register New User</strong> </p>
                 <br />
-                <p onClick={showCourseList}> <strong>Mostrar Cursos</strong> </p>
-                <br />
+                <Link to="/courses">Mostrar Cursos</Link>
                 <br />
                 <br />
                 <br /> 
             </div>
         </aside>
-        
+    
 
         {banner && 
             <div>
@@ -45,15 +41,9 @@ function Index180 () {
                 <RegisterNewUser/> 
             </div> 
         }
-        {courseList &&
-            <div>
-                <CoursesList/> 
-            </div>
-        }
         
         </>
     )
 }
 
-
-export default Index180;
+export default Admin;

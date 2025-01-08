@@ -1,14 +1,13 @@
 import Banner from "../componentsRoot/Banner";
 
-function IndexUser () {
+function User () {
     const userName=localStorage.getItem("name");
     return (
        <div> 
-       <p>ola {userName ? userName : "180"}</p> 
+       <p>ola {userName && userName }</p> 
        <Banner/>
-       <CourseDetails />
        </div>
     )
 }
 
-export default IndexUser;
+export default User;

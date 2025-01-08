@@ -2,15 +2,12 @@ import CoursePage from "../components/CoursePage";
 import { useParams } from "react-router-dom";
 
 function IndexModules () {
-    let params = useParams()
-   
-    console.log(params.id);
+    let params = useParams();
   
     return (
         <>
         <p>ola modulos</p>
-        <CoursePage
-        props = {params.id}/>
+        <CoursePage id = {params.id}/>
         </>
     )
 }

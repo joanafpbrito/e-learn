@@ -10,7 +10,7 @@ function CoursesList() {
 
   const handleSelectedCourse = (courseId) => {
     setSelectedCourse(courseId);
-    navigate(`/courses/${courseId}`);
+    navigate(`/courses/modules/${courseId}`);
   };
 
   return (
