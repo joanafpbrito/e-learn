@@ -58,9 +58,9 @@ function IndexLogin() {
 
     return (
         <div className="container">
-            <div className="sideIMG">
-                <img src="src\assets\logo 180 academy sem fundo blck.png" alt="" />
-            </div>
+            {/* <div className="sideIMG">
+                <img src="src\assets\logo180black.png" alt="" />
+            </div> */}
             <form className="LoginForm" onSubmit={handleSubmit}>
                 <h1>Login</h1>
                 <div className="innerForm">
