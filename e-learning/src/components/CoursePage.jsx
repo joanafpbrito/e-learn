@@ -1,7 +1,7 @@
 import { getCourseDetails } from "../../https";
 import { useState } from "react";
 import FakeButton from "../componentsRoot/FakeButton";
-import "./auxcss.css";
+import "./coursePage.css";
 import courseVideo1 from '../../backend/data/courses-videos/course-one.mp4';
 import courseVideo2 from '../../backend/data/courses-videos/course-two.mp4';
 import courseVideo3 from '../../backend/data/courses-videos/course-three.mp4';

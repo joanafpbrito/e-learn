@@ -9,7 +9,6 @@ function IndexModules () {
   
     return (
         <>
-        <p>ola modulos</p>
         <CoursePage id = {params.id}/>
         </>
     )

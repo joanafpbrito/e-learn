@@ -10,7 +10,6 @@ function IndexCourses () {
   
     return (
         <>
-        <p>ola cursos</p>
         <CoursesList/>
         </>
     )
