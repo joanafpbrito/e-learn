@@ -199,49 +199,6 @@ form select {
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/** Banner */
-.banner {
-  width: 100%;
-  margin: 0px;
-  background-color: #003B09;
-}
-
-.MainDivBanner {
-  display: flex;
-  padding: 50px;
-  width: 100%;
-  background-color: #003B09;
-}
-
-.bannerIMG {
-  width: 100%;
-  height: auto;
-}
-
-.bannerIMG img {
-  width: 40%;
-  margin-left: 180px; /* Move a imagem um pouco para a direita */
-}
-
-.bannerMSG {
-  font-family: 'Montserrat', sans-serif; /* Fonte principal */
-  color: #FFFFFF;
-  text-align: left;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-left: 180px;
-  gap: 15px; /* Reduz o gap */
-}
-
-.bannerMSG h1 {
-  color: #FFFFFF; /* Define a cor do título como branco */
-  font-family: 'Montserrat', sans-serif; /* Fonte principal */
-  text-align: left;
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
-
 /** Registo Utilizador */
 .MainDivReg {
   width: 100%;

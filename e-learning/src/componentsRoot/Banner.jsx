@@ -1,4 +1,5 @@
 import '../App.css';
+import '../componentsRoot/rootLayout.css';
 
 function Banner() {
     const userName = localStorage.getItem("name");
