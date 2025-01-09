@@ -1,56 +1,58 @@
 import { getCourseDetails } from "../../https";
 import { useState } from "react";
 import FakeButton from "../componentsRoot/FakeButton";
-
-
-function CoursePage(props, moduleId) {
-    const [selectedModule, setSelectedModule] = useState(false);
+import "./auxcss.css";
+import courseVideo1 from '../../backend/data/courses-videos/course-one.mp4';
+import courseVideo2 from '../../backend/data/courses-videos/course-two.mp4';
+import courseVideo3 from '../../backend/data/courses-videos/course-three.mp4';
+ 
+ 
+function CoursePage(props) {
+    const [selectedModule, setSelectedModule] = useState();
     const details = getCourseDetails();
     const filteredDetails = details.filter((m) => m["id-course"] == props.id);
-    console.log(details);
-
-
-
+   
     function handleSelectedModule(moduleId) {
-        const selectedModuleData = filteredDetails.find((m) => m["id-mod"] === moduleId)
-        setSelectedModule(selectedModuleData)
+        const selectedModuleData = filteredDetails.find((m) => m["id-mod"] === moduleId);
+        setSelectedModule(selectedModuleData);
     };
-
-    const filteredModules = details.filter((mod) => mod["id-mod"] == moduleId);
-
+ 
     return (
         <>
             <aside className="sidebar">
-
                 {filteredDetails.map((m) => (
-                    <div>
+                    <div key={m["id-mod"]}>
                         <br />
-                        <FakeButton onClick={() => handleSelectedModule(m['id-mod'])}>
+                        <FakeButton onClick={() => handleSelectedModule(m["id-mod"])}>
                             {m.mod}
                         </FakeButton>
                         <br />
                     </div>
-                )
-                )}
-
+                ))}
             </aside>
+ 
             {selectedModule && (
                 <div className="module-content">
                     <h3 className="module-title">{selectedModule.subtitle}</h3>
                     {selectedModule.video && (
                         <div className="video-container">
-                            <video controls>
-                                <source src={selectedModule.video.src} type="video/mp4" />
+                            <video
+                                controls
+                                src={selectedModule["id-mod"] === "01" ? courseVideo1
+                                    : selectedModule["id-mod"] === "02" ? courseVideo2
+                                    : selectedModule["id-mod"] === "03" ? courseVideo3
+                                    : null}
+                                onError={(e) => console.error('Video Error:', e)}
+                            >
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                     )}
-                    <p>{selectedModule.text}</p>
+                    <h1>{selectedModule.text}</h1>
                 </div>
             )}
-
         </>
     );
 }
-
+ 
 export default CoursePage;
