@@ -1,14 +1,14 @@
-
-
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Banner from "../componentsRoot/Banner";
+import FakeButton from "../componentsRoot/FakeButton";
 import RegisterNewUser from "./RegisterNewUser";
 
 
 function Admin () {
-    const userName=localStorage.getItem("name");
+
+    const navigate = useNavigate();
+  
     const [banner, setBanner] = useState(true);
     const [newUser, setNewUser] = useState();
     
@@ -19,18 +19,20 @@ function Admin () {
       setCourseList(false);
     }
 
+    function showCourses () {
+        navigate("/courses")
+    }
+
 
     return (
         <>
         <aside className="sidebar">
             <div>
-                <p onClick={showRegisterNewUser} > <strong>Registar Novo Utilizador</strong> </p>
                 <br />
-                <Link to="/courses">Ver Cursos</Link>
+                <FakeButton onClick={showRegisterNewUser}> Registar Novo Utilizador </FakeButton>
                 <br />
-                <br />
+                <FakeButton onClick={showCourses}>Ver Cursos</FakeButton>
                 <br /> 
-                <br />
             </div>
         </aside>
     
