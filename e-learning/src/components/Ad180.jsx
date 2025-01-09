@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate} from "react-router-dom";
 import Banner from "../componentsRoot/Banner";
 import RegisterNewUser from "./RegisterNewUser";
+import FakeButton from "../componentsRoot/FakeButton";
 
 
 
