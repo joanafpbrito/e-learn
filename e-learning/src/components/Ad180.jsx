@@ -20,6 +20,11 @@ function Ad180 () {
       setCourseList(false);
     }
 
+    function showCourses () {
+        navigate("/courses")
+    }
+
+
     return (
         <>
         <aside className="sidebar">
@@ -27,7 +32,7 @@ function Ad180 () {
                 <br />
                 <FakeButton onClick={showRegisterNewUser}> Registar Novo Utilizador </FakeButton>
                 <br />
-                <FakeButton onClick={navigate("/courses")}>Ver cursos</FakeButton>
+                <FakeButton onClick={showCourses}>Ver cursos</FakeButton>
                 <br />
             </div>
         </aside>

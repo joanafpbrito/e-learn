@@ -2,7 +2,8 @@
     {
         "id-course": "001",
         "id-mod": "01",
-        "subtitle": "Modulo 1",
+        "mod": "Módulo 1",
+        "subtitle": "Tratamento de Feridas",
         "text": "BLABLABLA",
         "video": {
             "src":"courses-videos/course-one.mp4"
@@ -11,7 +12,8 @@
     {
         "id-course": "001",
         "id-mod": "02",
-        "subtitle": "Modulo 2",
+        "mod": "Módulo 2",
+        "subtitle": "Reanimação",
         "text": "BLABLABLA",
         "video": {
             "src":"courses-videos/course-one.mp4"
@@ -20,7 +22,8 @@
     {
         "id-course": "001",
         "id-mod": "03",
-        "subtitle": "Modulo 3",
+        "mod": "Módulo 3",
+        "subtitle": "Sistema integrado de Emergência Médica",
         "text": "BLABLABLA",
         "video": {
             "src":"courses-videos/course-one.mp4"
@@ -29,6 +32,7 @@
     {
         "id-course": "002",
         "id-mod": "04",
+        "mod": "Módulo 1",
         "subtitle": "Modulo 1",
         "text": "BLABLABLA",
         "video": {
@@ -38,6 +42,7 @@
     {
         "id-course": "002",
         "id-mod": "05",
+        "mod": "Módulo 2",
         "subtitle": "Modulo 2",
         "text": "BLABLABLA",
         "video": {
