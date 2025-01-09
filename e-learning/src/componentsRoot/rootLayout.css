@@ -1,11 +1,12 @@
+
+
 /** Sidebar */
 .sidebar {
-  background-color: #222;
+  background-color: #373737;
   color: white;
-  width: 17%;
+  width: 200px;
   height: 100vh;
   position: fixed;
-  top: 8%; /* Após o Header */ 
   left: 0;
   overflow-y: auto;
   padding: 20px;
@@ -24,7 +25,7 @@
 .sidebar ul li a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 12;
 }
 
 .sidebar ul li a:hover {
@@ -34,15 +35,76 @@
 /** Fake Button**/
 .sidebar-button {
   background: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: white;
   border: none;
-  border-radius: 0%;
-  width: 100%; /* Ocupa a largura inteira da sidebar */
-  height: 50px; /* Altura fixa */
+  width: 100%;
+  height: 50px;
   cursor: pointer;
-  transition: box-shadow 0.2s ease-in-out;
 }
 
 .sidebar-button:hover {
   background: transparent;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Pequeno drop shadow no hover */
 }
+
+/** Tudo geral + Banner */
+.main-content{
+  margin-top: 40px;
+  margin-left: 200px;
+  padding: 20px;
+  height: calc(100vh - 40px); /* Altura total da tela menos o cabeçalho */
+}
+
+/**Banner */
+.MainDivBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  width: calc(100% - 200px); /* Subtrai a largura da sidebar (200px) */
+  height: 250px; /* Altura ajustada do banner */
+  background-color: #003B09;
+}
+
+/*Banner smile*/
+.bannerIMG {
+  width: 40%;
+  height: auto;
+}
+
+.bannerIMG img {
+  margin-top: 40px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.bannerMSG {
+  font-family: 'Montserrat', sans-serif; /* Fonte principal */
+  color: #FFFFFF;
+  text-align: left;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 180px;
+  justify-content: center;
+  gap: 15px; /* Reduz o gap */
+}
+
+.bannerMSG h1 {
+  color: #FFFFFF; /* Define a cor do título como branco */
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif; /* Fonte principal */
+  text-align: left;
+}
+
+.bannerMSG p {
+  font-size: 1.1rem; /* Ajuste no tamanho do texto */
+  font-weight: 400;
+  line-height: 1.4; /* Para melhor legibilidade */
+  color: #D1D1D1; /* Cor clara para o texto secundário */
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */

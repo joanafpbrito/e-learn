@@ -1,5 +1,9 @@
 /**CSS DEFINIÇÕES GERAIS DA PÁG (TUDO O QUE APARECE EM TODAS) */
 
+:root{
+  
+}
+
 /** Definições Gerais para a Fonte */
 body {
   font-family: 'Montserrat', sans-serif; /* Fonte principal */
@@ -72,15 +76,15 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: #F0F1F3;
   color: #555;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 9%;
+  height: 40px;
   width: 100%;
-  padding: 0 20px; /* Espaçamento nos lados */
+  padding: 10px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 2;
 }
@@ -115,15 +119,18 @@ a:hover {
   background-color: #F6F6F6; /* Cor de fundo suave */
   color: #555; /* Cor do texto */
   text-align: left; /* Centraliza o texto */
-  font-size: 10px; /* Tamanho do texto ajustado */
   position: fixed; /* Fixa o footer no final da página */
   bottom: 0; /* Alinha ao fundo */
   left: 0; /* Estende para a esquerda */
   right: 0; /* Estende para a direita */
-  height: 40px; /* Altura do footer */
+  height: 20px; /* Altura do footer */
   padding: 5px 20px; /* Espaçamento interno */
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
   z-index: 10; /* Garantir que fique acima de outros elementos */
+}
+
+.footer p{
+  font-size: 11px; /* Tamanho do texto ajustado */
 }
 
 /** Responsividade */
