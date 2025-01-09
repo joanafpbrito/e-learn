@@ -5,8 +5,8 @@ import { useState } from "react";
 import logo180black from "../assets/logo180black.png";
 import { AiOutlineLogout } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
-import { CiUser } from "react-icons/ci";
-import { IoMdChatbubbles } from "react-icons/io";
+import { LuCircleUserRound } from "react-icons/lu";
+import { RiChat3Line } from "react-icons/ri";
 import Chat from "../components/Chat";
 
 
@@ -21,10 +21,10 @@ function Header() {
             <header className="header">
                 <div className="logo"><Link to="/"> <img src={logo180black} alt="" /> </Link></div>
                 <nav className="header-icons">
-                    <Link to="/"> <CiUser /> </Link>
+                    <Link to="/"> <LuCircleUserRound /> </Link>
+                    <div onClick={toggleChat}> <RiChat3Line size={24} /></div>
                     <Link to="/"> <IoSettingsOutline /> </Link>
                     <Link to="/logout"> <AiOutlineLogout /> </Link>
-                    <div onClick={toggleChat}> <IoMdChatbubbles size={24} /></div>
                 </nav>
                 {isChatOpen && <Chat/>}
             </header>
