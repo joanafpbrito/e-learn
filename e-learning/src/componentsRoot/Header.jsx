@@ -10,6 +10,7 @@ import Chat from "../components/Chat";
 
 
 
+
 function Header() {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const toggleChat = () => setIsChatOpen(!isChatOpen);
