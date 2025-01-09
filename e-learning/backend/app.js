@@ -4,6 +4,7 @@ import express from "express";
 import jwt from "jsonwebtoken";
 import http from "http";
 import { Server } from "socket.io";
+const path = require('path')
 
 
 const SECRET_KEY = "your_secret_key";
@@ -15,6 +16,7 @@ const createJSONToken = (email) => {
 
 const app = express();
 app.use(express.static("./data/front-image-courses/"));
+app.use(express.static("./data/courses-videos/"));
 app.use(express.static("./data/courses-videos/"))
 app.use(bodyParser.json());
 
@@ -119,6 +121,7 @@ app.get("/coursesModules", async (req, res) => {
   res.status(200).json({ coursesModules });
 });
 
+//_______________-_____
 
 
 //--------------------------------------------------------------------------------------

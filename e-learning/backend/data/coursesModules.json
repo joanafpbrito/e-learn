@@ -6,7 +6,7 @@
         "subtitle": "Tratamento de Feridas",
         "text": "BLABLABLA",
         "video": {
-            "src":"courses-videos/course-one.mp4"
+            "src":"/data/courses-videos/course-one.mp4"
                 }
     },
     {
