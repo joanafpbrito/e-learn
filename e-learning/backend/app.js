@@ -4,7 +4,6 @@ import express from "express";
 import jwt from "jsonwebtoken";
 import http from "http";
 import { Server } from "socket.io";
-const path = require('path')
 
 
 const SECRET_KEY = "your_secret_key";
