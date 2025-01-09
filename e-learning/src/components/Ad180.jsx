@@ -1,11 +1,15 @@
 import { useState } from "react";
+import { useNavigate} from "react-router-dom";
 import Banner from "../componentsRoot/Banner";
 import RegisterNewUser from "./RegisterNewUser";
-import { Link } from "react-router-dom";
+import FakeButton from "../componentsRoot/FakeButton";
+
 
 
 function Ad180 () {
-    const userName=localStorage.getItem("name");
+
+    const navigate = useNavigate();
+    
     const [banner, setBanner] = useState(true);
     const [newUser, setNewUser] = useState();
     
@@ -20,13 +24,11 @@ function Ad180 () {
         <>
         <aside className="sidebar">
             <div>
-                <p onClick={showRegisterNewUser} > <strong>Registar Novo Utilizador</strong> </p>
-                <Link to="/courses">Ver Cursos</Link>
                 <br />
+                <FakeButton onClick={showRegisterNewUser}> Registar Novo Utilizador </FakeButton>
                 <br />
+                <FakeButton onClick={navigate("/courses")}>Ver cursos</FakeButton>
                 <br />
-                <br />
-                <br /> 
             </div>
         </aside>
         

@@ -2,18 +2,20 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
 function Logout () {
+
     const navigate = useNavigate();
 
-    useEffect(() => {
-        localStorage.clear();
+    useEffect(() => {       
+            localStorage.clear();
+            setTimeout(() => {
+                navigate("/");
+            }, 100);
+        }, [navigate]);
 
-        navigate ("/");
-    }, [navigate]);
-
-    return (
-        <div>
-            Goodbye!
-        </div>
+    return(
+        <>
+        <p>Até breve...</p>
+        </>
     )
 }
 

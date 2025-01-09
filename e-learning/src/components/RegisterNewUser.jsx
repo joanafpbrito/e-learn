@@ -8,6 +8,8 @@ function RegisterNewUser() {
   const [passwordsAreNotEqual, setPasswordsAreNotEqual] = useState(false);
   const [selectedLimits, setSelectedLimits] = useState([]);
 
+  const role = localStorage.getItem('role');
+
   function generatePassword() {
     const pass = Math.random().toString(36).slice(-10);
     setPassword(pass);
@@ -92,6 +94,8 @@ function RegisterNewUser() {
           </div>
         </div>
 
+        {role == "180" && (
+        <>
         <div>
           <label htmlFor="phone">Tipo de Utilizador</label>
           <select id="role" name="role" required>
@@ -115,10 +119,13 @@ function RegisterNewUser() {
           <p>Quantos?</p>
           {[5, 10, 15, 20, 25].map((limit) => (
             <label key={limit}>
-              <input type="checkbox" id="how-many" name="how-many" value={limit} onChange={handleCheckboxChange} /> {limit}
+              <input type="radio" id="how-many" name="how-many" value={limit} onChange={handleCheckboxChange} /> {limit}
             </label>
           ))}
         </div>
+        </>
+        )}
+       
 
         <div className='btReg'>
           <p><button className='BotaoReg' type="submit">Registar</button></p>
