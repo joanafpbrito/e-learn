@@ -1,70 +1,71 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+/** Login e forms */
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
-/* Estilos gerais */
-/* body, html {
-  height: 100%;
+body {
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 16px; 
+  line-height: 1.6;
+  color: #333;
   margin: 0;
-  background: linear-gradient(to right, #4facfe, #00f2fe); 
+  padding: 0;
+  background-color: #003B09;
+}
+
+/* Container pai para alinhar lado a lado */
+.containerLoginWrapper {
   display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100vh; /* Ocupar a altura total da janela */
+  padding: 20px;
+}
+
+/* Container principal de Login */
+.containerLogin {
+  flex: 1; /* Tamanho proporcional */
   justify-content: center;
   align-items: center;
-} */
-
-/* Container principal */
-.login-container {
-  background: #fff;
-  padding: 30px;
+  height: calc(100vh - 9% - 40px); /* Altura da tela menos header e footer */
+  padding: 20px;
   max-width: 400px;
-  width: 100%;
   text-align: center;
 }
 
-/* Título do formulário */
-.login-form h2 {
+/* Estilo para a coluna da imagem */
+.loginImage {
+  flex: 1; /* Tamanho proporcional */
+  max-width: 400px; /* Limita a largura */
+  text-align: center;
+}
+
+.loginImage img {
+  max-width: 100%; /* Faz a imagem se ajustar à coluna */
+  height: auto; /* Mantém a proporção */
+  border-radius: 8px; /* Opcional: arredonda a imagem */
+}
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; /* Ajustado para responsividade */
+  max-width: 360px; /* Limite para telas maiores */
+  height: auto; 
+  background-color: transparent; 
+  padding: 10px;
+  padding: 20px;
+}
+
+.LoginForm h1 {
   margin-bottom: 20px;
-  font-size: 2rem;
-  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.LoginForm h5 {
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
 
 /* Grupo de campos (inputs e labels) */
@@ -73,19 +74,20 @@
   text-align: left;
 }
 
+
+/* Titulo de cada barra ISTO NAO É LOGIN */
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-size: 0.9rem;
-  color: #555;
+  color: black;
 }
 
+/* Input do utilizador*/
 .form-group input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
   font-size: 1rem;
-  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-group input:focus {
@@ -93,77 +95,12 @@
   outline: none;
 }
 
-/* Botão de envio */
-.login-button {
+.innerForm div {
+  margin-bottom: 20px;
   width: 100%;
-  padding: 10px;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
-  border: none;
-  border-radius: 20px;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  text-align: left;
 }
 
-.login-button:hover {
-  background: linear-gradient(to right, #00c6ff, #0072ff);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Efeito de hover no botão */
-.login-button:active {
-  transform: translateY(1px);
-  box-shadow: none;
-}
-
-/* Responsividade */
-@media (max-width: 480px) {
-  .login-container {
-    padding: 20px;
-  }
-
-  .login-form h2 {
-    font-size: 1.5rem;
-  }
-}
-
-/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/** LOGIN */
-.containerLogin {
-  padding-left: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-.LoginForm {
-  display: flex; /* Organiza os itens do formulário em uma coluna */
-  flex-direction: column; /* Alinha os itens verticalmente */
-  justify-content: center; /* Centraliza os itens dentro do formulário */
-  align-items: center; /* Alinha os itens horizontalmente */
-  width: 90%; /* Ajusta a largura do formulário */
-  height: auto; /* Altura ajustada para telas menores */
-  background-color: transparent; /* Cor de fundo branca */
-  padding: 10px; /* Ajuste do padding */
-  overflow: hidden;
-}
-
-/* CSS Página Login */
-.container {
-  margin-top: 60%;
-  padding-right: 10px; /* Reduz o padding */
-  padding-left: 10px; /* Reduz o padding */
-  height: auto; /* Ajuste para telas pequenas */
-}
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/** Geral Forms */
 form {
   display: flex;
   flex-direction: column;
@@ -175,60 +112,79 @@ form {
   margin-top: 15px;
 }
 
+/*LOGIN*/
 form label {
-  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  color: white;
+  margin-bottom: 5px;
   margin-top: 15px;
   margin-left: 15px;
   margin-bottom: 5px;
-  font-family: 'Montserrat', sans-serif;
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
+
 }
 
 form input {
-  margin-left: 15px;
-  width: 220px;
-  height: 30px;
+  width: 100%;
+  height: 40px;
   padding: 10px;
-  margin-bottom: 7px;
   border: 1px solid #333;
   font-family: 'Montserrat', sans-serif;
-  font-size: 12;
+  font-size: 12px;
+  color: #333;
+  transition: border-color 0.3s ease;
+  margin-left: 15px;
+  margin-bottom: 7px;
   transition: border-color 0.3s;
 }
 
 .form input:focus {
+  border-color: #239300;
   outline: none;
 }
 
 form ::placeholder {
-  color: black
-  font-size: 12;
+  color: #777;
+  font-size: 12px;
   font-weight: 400;
 }
 
 button {
-  width: 150px;
-  margin-top: 20px;
-  padding: 10px;
-  background: #239300;
+  width: 100%;
+  max-width: 200px;
+  height: 45px;
+  background-color: #A7EF7A;
   border: none;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
   color: white;
-  font-size: 14;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s;
+  margin-top: 20px;
+  padding: 10px;
 }
 
 button:hover {
-  background: #2cb900;
+  background: #329933;
 }
 
 button:active {
-  transform: translateY(1px);
+  transform: scale(0.98);
+}
+
+.forgotPassword {
+  margin-top: 5px;
+  font-size: 12px;
+  color: red;
+  cursor: pointer;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
 }
 
 /* class para os selectors (tipo user) */
@@ -244,6 +200,12 @@ form select {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /** Banner */
+.banner {
+  width: 100%;
+  margin: 0px;
+  background-color: #003B09;
+}
+
 .MainDivBanner {
   display: flex;
   padding: 50px;
@@ -373,7 +335,7 @@ form select {
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* CSS Lista Cursos */
+/** Cursos */
 .containerCursos {
   display: flex;
   justify-content: center;
@@ -432,7 +394,7 @@ form select {
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
-/** Página Erro */
+/** Erro */
 .errorPage {
   padding-top: 50px;
   background-color: #f4f4f4;
@@ -452,28 +414,5 @@ p {
 .errorPage img {
   height: 500px;
   width: auto;
-}
-
-/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/* Responsividade mobile */
-
-/* Media Query para telas entre 320px e 767px */
-@media (min-width: 320px) and (max-width: 767px) {
-
-  /* Ajustes para h1 */
-  h1 {
-    font-size: 16px; /* Reduz o tamanho da fonte */
-    margin: 10px; /* Adiciona margem para mais espaço */
-  }
-
-  /* Ajustes para p */
-  p {
-    font-size: 12px; /* Reduz o tamanho da fonte */
-    margin: 5px; /* Adiciona margem para mais espaço */
-  }
-
-  /* --------------------------------------------------------------------------------------------------------------------------------------------- */
-
 }
 
