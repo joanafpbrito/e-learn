@@ -20,28 +20,28 @@ body {
 
 .containerLoginWrapper {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100vh; /* Ocupar a altura total da janela */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   padding: 20px;
 }
 
 /* Container principal de Login */
 .containerLogin {
-  flex: 1; /* Tamanho proporcional */
+  flex: 1;
   justify-content: center;
   align-items: center;
   height: calc(100vh - 9% - 40px); /* Altura da tela menos header e footer */
-  padding: 20px;
   max-width: 400px;
   text-align: center;
 }
 
-/* Estilo para a coluna da imagem */
+/* Estilo para a div da imagem da pag de login */
 .loginImage {
-  flex: 1; /* Tamanho proporcional */
-  max-width: 400px; /* Limita a largura */
-  text-align: center;
+  flex: 1;
+  max-width: 500px;
+  padding-left: 500px;
+  padding-bottom: 100px;
 }
 
 .loginImage img {
@@ -51,14 +51,14 @@ body {
 }
 
 .LoginForm {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  width: 500px;
+  width: 700px;
   height: 450px;
   background-color: transparent; 
-  padding: 20px;
   overflow: hidden;
 }
 
@@ -74,10 +74,19 @@ body {
   color: white;
 }
 
+.LoginForm p {
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding-left: 9px;
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+  font-size: 12px;
+}
+
 .forgotPassword {
   margin-top: 5px;
   font-size: 12px;
-  color: red;
+  color: orange;
   cursor: pointer;
 }
 
@@ -110,7 +119,7 @@ body {
 }
 
 .form-group input:focus {
-  border-color: #4facfe;
+  border-color: #008013;
   outline: none;
 }
 
@@ -165,11 +174,38 @@ form input {
 }
 
 form ::placeholder {
-  color: grey;
+  color: #a5a5a5;
   font-size: 12px;
   font-weight: 400;
 }
 
+/* Botao da pagina de login */
+form button{
+  width: 150px;
+  height: 40px;
+  background-color: #A7EF7A;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: 14px;
+  text-align:center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease; 
+}
+
+form button:hover {
+  background: #329933;
+  color: white
+}
+
+form button:active {
+  transform: scale(0.98);
+}
+
+
+/* este botao nao é do login */
 button {
   width: 150px;
   height: 40px;
@@ -362,7 +398,7 @@ form select {
 /** Erro */
 .errorPage {
   padding-top: 50px;
-  background-color: #f4f4f4;
+  background-color: #f4f3f2;
   width: 100%;
   height: 100vh; /* Altura igual à altura total da janela */
   display: flex;

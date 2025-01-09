@@ -79,7 +79,7 @@ function Login() {
                 <div className="containerLogin">
                     <form className="LoginForm" onSubmit={handleSubmit}>
                         <h1>Bem-Vindo!</h1>
-                        <h5>Faça login para dar início à sua sessão</h5>
+                        <h5>Faça o login para dar início à sua sessão</h5>
                         <div className="innerForm">
                             <div>
                                 <label htmlFor="email">Email</label>
@@ -106,7 +106,7 @@ function Login() {
                             </div>
                         </div>
                         <p>
-                            <button type="submit">Login</button>
+                            <button type="submit">Entrar</button>
                         </p>
                     </form>
                 </div>
