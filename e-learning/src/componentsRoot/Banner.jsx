@@ -1,4 +1,4 @@
-import './rootLayout.css';
+import '../App.css';
 
 function Banner() {
     const userName = localStorage.getItem("name");
@@ -11,7 +11,7 @@ function Banner() {
         message = "O conhecimento está nas suas mãos. Pronto para investir em si e construir novas competências?";
     }
     if (role === '180') {
-        message = "1805. Pronto para liderar a gestão da aprendizagem?";
+        message = "Pronto para liderar a gestão da aprendizagem?";
     }
     if (role === 'teacher') {
         message = "O conhecimento está nas suas mãos. Pronto para criar conteúdo e acompanhar os seus formandos?";
@@ -22,7 +22,7 @@ function Banner() {
         <>
             <div className='MainDivBanner'>
                 <div className='bannerMSG'>
-                    <h2>Olá, {userName ? userName : "180"}!</h2>
+                    <h1>Olá, {userName ? userName : "180"}!</h1>
                     {message}
                 </div>
                 <div className="bannerIMG">

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css'
-import RootLayout from './componentsRoot/RootLAyout';
+import RootLayout from './componentsRoot/RootLayout';
 import ErrorPage from './pages/ErrorPage';
 import Index from './pages/Index';
 import IndexModules from './pages/IndexModules';
@@ -8,6 +8,7 @@ import IndexCourses from './pages/IndexCourses';
 import IndexLogin from './pages/IndexLogin';
 import IndexLogout from './pages/IndexLogout';
 
+import Login from './components/Login';
 
 const ROUTER = createBrowserRouter([
   // {path: '/', element:<IndexLogin/>},
@@ -27,6 +28,7 @@ const ROUTER = createBrowserRouter([
   //{path: '/user', element: <IndexUser/>},
   {path: "/courses", element: <IndexCourses/>},
   {path: "/courses/modules/:id", element: <IndexModules/>},
+  
 ]},
   {path: '*', element: <ErrorPage /> },
   {path: '/login', element:<IndexLogin/>},
