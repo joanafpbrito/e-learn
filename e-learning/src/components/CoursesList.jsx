@@ -8,7 +8,7 @@ function CoursesList() {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const navigate = useNavigate();
 
-  const handleSelectedCourse = (courseId) => {
+  function handleSelectedCourse (courseId) {
     setSelectedCourse(courseId);
     navigate(`/courses/modules/${courseId}`);
   };
