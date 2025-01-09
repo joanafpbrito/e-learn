@@ -4,14 +4,17 @@
   
 }
 
-/** Definições Gerais para a Fonte */
+/** Definições Gerais*/
 body {
   font-family: 'Montserrat', sans-serif; /* Fonte principal */
+  height: 100%;
   font-size: 16px; /* Tamanho base */
   line-height: 1.6; /* Altura da linha para boa legibilidade */
   color: #333; /* Cor padrão do texto */
   margin: 0;
   padding: 0;
+  overflow: hidden; /* Evita scroll indesejado */
+  background-color: rgba(245, 245, 220, 0.9); 
 }
 
 /** Estilo Geral para Títulos */
@@ -105,7 +108,7 @@ a:hover {
 .header-icons svg {
   height: 20px; 
   width: 20px;
-  cursor: pointer; /* Transforma o ícone em interativo */
+  cursor: pointer;
   transition: color 0.3s ease-in-out;
   color: #008000;
 }
