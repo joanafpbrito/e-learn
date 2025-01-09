@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../App.css';
 
 function RegisterNewUser() {
   const [password, setPassword] = useState();
@@ -120,7 +121,7 @@ function RegisterNewUser() {
         </div>
 
         <div className='btReg'>
-          <p><button className='BotaoReg' type="submit">Register Employee</button></p>
+          <p><button className='BotaoReg' type="submit">Registar</button></p>
         </div>
 
       </div>

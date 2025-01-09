@@ -131,9 +131,9 @@
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* CSS Página Login */
-.container {
-  padding-right: 350px;
+/** LOGIN */
+.containerLogin {
+  padding-left: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,37 +141,29 @@
   margin: 0;
 }
 
-/* class para o formulario login */
 .LoginForm {
   display: flex; /* Organiza os itens do formulário em uma coluna */
   flex-direction: column; /* Alinha os itens verticalmente */
   justify-content: center; /* Centraliza os itens dentro do formulário */
   align-items: center; /* Alinha os itens horizontalmente */
-  width: 500px; /* Largura fixa do formulário */
-  height: 450px; /* Altura fixa do formulário */
+  width: 90%; /* Ajusta a largura do formulário */
+  height: auto; /* Altura ajustada para telas menores */
   background-color: transparent; /* Cor de fundo branca */
-  padding: 20px; /* Adiciona um espaçamento interno */
+  padding: 10px; /* Ajuste do padding */
   overflow: hidden;
 }
 
-.sideIMG {
-  width: 100%;
-  padding-right: 10px;
-}
-
-.sideIMG img {
-  padding: 200px;
-  width: 100%; 
-  /* A imagem ocupa toda a largura da div */
-  height: auto; 
-  /* Mantém a proporção da imagem */
-  object-fit: cover;
-  margin-left: 15%;
+/* CSS Página Login */
+.container {
+  margin-top: 60%;
+  padding-right: 10px; /* Reduz o padding */
+  padding-left: 10px; /* Reduz o padding */
+  height: auto; /* Ajuste para telas pequenas */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* CSS Geral dos Forms */
+/** Geral Forms */
 form {
   display: flex;
   flex-direction: column;
@@ -198,7 +190,7 @@ form label {
 form input {
   margin-left: 15px;
   width: 220px;
-  height: 50px;
+  height: 30px;
   padding: 10px;
   margin-bottom: 7px;
   border: 1px solid #333;
@@ -235,7 +227,6 @@ button:hover {
   background: #2cb900;
 }
 
-/* Efeito de hover no botão */
 button:active {
   transform: translateY(1px);
 }
@@ -243,78 +234,87 @@ button:active {
 /* class para os selectors (tipo user) */
 form select {
   height: 40px;
-  width: 120px;
+  width: 150px;
   margin-top: 5px;
   margin-left: 10px;
-  font-weight: 600;
+  padding-left: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* CSS Banner */
+/** Banner */
 .MainDivBanner {
   display: flex;
   padding: 50px;
   width: 100%;
-  background-color: darkgreen;
+  background-color: #003B09;
 }
 
 .bannerIMG {
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 
 .bannerIMG img {
-  width: 50%;
-  margin-left: 50px;
+  width: 40%;
+  margin-left: 180px; /* Move a imagem um pouco para a direita */
 }
 
 .bannerMSG {
+  font-family: 'Montserrat', sans-serif; /* Fonte principal */
   color: #FFFFFF;
-  width: 50%;
+  text-align: left;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 30px;
-  padding-left: 80px;
+  margin-left: 180px;
+  gap: 15px; /* Reduz o gap */
+}
+
+.bannerMSG h1 {
+  color: #FFFFFF; /* Define a cor do título como branco */
+  font-family: 'Montserrat', sans-serif; /* Fonte principal */
+  text-align: left;
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* CSS Registo Utilizador */
+/** Registo Utilizador */
 .MainDivReg {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
 .line1 {
   display: flex;
   flex-direction: row;
-  gap: 70px;
-  margin: 10px;
+  gap: 25px;
+  margin: 0;
 }
 
 .line2 {
   display: flex;
   flex-direction: row;
-  gap: 70px;
-  margin: 10px;
+  gap: 25px;
+  margin: 0;
 }
 
 .line3 {
   display: flex;
   flex-direction: row;
-  gap: 70px;
-  margin: 30px;
+  gap: 25px;
+  margin: 0;
 }
 
 .DivGerar {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 0;
 }
 
 .btGerar {
@@ -324,15 +324,26 @@ form select {
   justify-content: center;
 }
 
+.btGerar button {
+  font-size: 14px;
+}
+
+.btReg button {
+  height: 35px;
+  width: 120px;
+  font-size: 14px;
+}
+
 .containerPass {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 50px;
-  margin-top: 30px;
+  width: 80px;
+  height: 30px;
+  margin-top: 35px;
   margin-left: 20px;
   padding-left: 10px;
+  border-color: black;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -340,22 +351,24 @@ form select {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px;
+  margin: 0;
 }
 
 .line4 input {
-  width: 50px;
+  height: 15px;
+  width: 15px;
 }
 
 .line5 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 30px;
+  margin: 0;
 }
 
 .line5 input {
-  width: 50px;
+  height: 15px;
+  width: 15px;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -367,10 +380,8 @@ form select {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  /* flex-wrap: wrap;           */
-  /* width: fit-content;     */
-  /* height: 100vh;             */
-  padding: 20px;
+  padding: 10px; /* Ajusta o padding */
+  margin: 0;
   margin-top: 50px;
 }
 
@@ -384,17 +395,19 @@ form select {
   padding-top: 30px;
   width: 100%;
   max-width: 1200px;
+  gap: 20px; /* Reduz o gap */
 }
 
 .Courses li {
-  width: 300px;
-  height: 300px;
-  background-color: #f4f4f4; /* padding: 30px; */
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+  background-color: #f4f4f4;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 30px;
+  gap: 15px;
   align-items: center;
   transition: transform 0.3s ease-in-out;
 }
@@ -410,7 +423,7 @@ form select {
 }
 
 .Courses li h3 {
-  font-size: 18px;
+  font-size: 16px; /* Reduz o tamanho da fonte */
   color: #333;
   margin-top: 10px;
   text-align: center;
@@ -420,7 +433,6 @@ form select {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------ */
 
 /** Página Erro */
-
 .errorPage {
   padding-top: 50px;
   background-color: #f4f4f4;
@@ -463,184 +475,5 @@ p {
 
   /* --------------------------------------------------------------------------------------------------------------------------------------------- */
 
-  /* CSS Página Login */
-  .container {
-    margin-top: 60%;
-    padding-right: 10px; /* Reduz o padding */
-    padding-left: 10px; /* Reduz o padding */
-    height: auto; /* Ajuste para telas pequenas */
-  }
-
-  .LoginForm {
-    width: 90%; /* Ajusta a largura do formulário */
-    height: auto; /* Altura ajustada para telas menores */
-    padding: 10px; /* Ajuste do padding */
-  }
-
-  .sideIMG {
-    width: 100%;
-  }
-
-  .sideIMG img {
-    padding: 50px; /* Reduz o padding da imagem */
-    margin-left: 0; /* Remove a margem esquerda */
-  }
-
-  /* Ajustes para o select */
-  form select {
-    width: 100%; /* Ajusta o select para 100% de largura */
-    margin-top: 10px; /* Espaçamento superior */
-  }
-
-  /* ---------------------------------------------------------------------------------------------------------------------------------------------  */
-
-  /* CSS Banner */
-  .MainDivBanner {
-    padding: 30px;
-  }
-
-  .bannerIMG {
-    width: 100%; /* Banner ocupa 100% da largura */
-    margin: 30px; /* Margem inferior */
-  }
-
-  .bannerIMG img {
-    width: 100%;
-  }
-
-  .bannerMSG {
-    width: 100%;
-    padding-left: 0; /* Remove padding da mensagem */
-    text-align: center; /* Centraliza a mensagem */
-    gap: 15px; /* Reduz o gap */
-  }
-
-  /* --------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-  /* CSS Lista Cursos */
-  .containerCursos {
-    padding: 10px; /* Ajusta o padding */
-    margin: 0;
-  }
-
-  .Courses {
-    gap: 20px; /* Reduz o gap */
-  }
-
-  .Courses li {
-    width: 200px;
-    height: 200px;
-    padding: 30px;
-    gap: 15px;
-  }
-
-  .Courses li img {
-    width: 100;
-    height: auto;
-  }
-
-  .Courses li h3 {
-    font-size: 16px; /* Reduz o tamanho da fonte */
-  }
-
-  /* -----------------------------------------------------------------------------------------------------------------------------------------------  */
-
-  /* CSS Página Erro */
-  .Error img {
-    width: 100%; /* Ajusta a largura da imagem */
-    height: auto; /* Mantém a proporção */
-  }
-
-  /* ---------------------------------------------------------------------------------------------------------------------------------------------- */
-
-  /* CSS Geral Forms */
-
-  form label {
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-bottom: 5px;
-    font-size: 12px;
-  }
-
-  form input {
-    margin-left: 15px;
-    width: 100px;
-    height: 30px;
-    padding: 10px;
-    margin-bottom: 7px;
-    font-size: 10px;
-  }
-
-  form select {
-    height: 20px;
-    width: 100px;
-    margin-top: 5px;
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 10px;
-  }
-
-  /* -------------------------------------------------------------------------------------------------------------------------------------------- */
-
-  /* CSS Registo Utilizador */
-  .MainDivReg {
-    padding: 20px; /* Adiciona padding para dar espaço */
-  }
-
-  .line1 {
-    gap: 25px;
-    margin: 0;
-  }
-
-  .line2 {
-    gap: 25px;
-    margin: 0;
-  }
-
-  .line3 {
-    gap: 25px;
-    margin: 0;
-  }
-
-  .DivGerar {
-    margin: 0;
-  }
-
-  .btGerar button {
-    height: 30px;
-    font-size: 12px;
-  }
-
-  .containerPass {
-    width: 80px;
-    height: 30px;
-    margin-top: 35px;
-    margin-left: 20px;
-    padding-left: 10px;
-  }
-
-  .line4 {
-    margin: 0;
-  }
-
-  .line4 input {
-    height: 15px;
-    width: 15px;
-  }
-
-  .line5 {
-    margin: 0;
-  }
-
-  .line5 input {
-    height: 15px;
-    width: 15px;
-  }
-
 }
 
-.btReg button {
-  height: 35px;
-  width: 120px;
-  font-size: 11px;
-}

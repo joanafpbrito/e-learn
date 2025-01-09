@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function IndexLogin() {
+function Login() {
     const [enteredValues, setEnteredValues] = useState({
         email: '',
         password: '',
@@ -57,22 +57,24 @@ function IndexLogin() {
     }
 
     return (
-        <div className="container">
+        <div className="containerLogin">
             {/* <div className="sideIMG">
                 <img src="src\assets\logo180black.png" alt="" />
             </div> */}
             <form className="LoginForm" onSubmit={handleSubmit}>
-                <h1>Login</h1>
+                <h1>Bem-Vindo!</h1>
+                <h5>Faça login para dar início à sua sessão</h5>
                 <div className="innerForm">
                     <div >
                         <label htmlFor="email">Email</label>
                         <input onChange={(event) => handleInputChange('email', event.target.value)}
-                            id="email" type="email" name="email" value={enteredValues.email} />
+                            id="email" type="email" name="email" placeholder="Insira aqui o seu email" value={enteredValues.email} />
                     </div>
                     <div >
                         <label htmlFor="password">Password</label>
                         <input onChange={(event) => handleInputChange('password', event.target.value)}
-                            id="password" type="password" name="password" value={enteredValues.password} />
+                            id="password" type="password" name="password" placeholder="Insira aqui a sua password"  value={enteredValues.password} />
+                            <p >Esqueceu a sua password? Clique aqui</p>
                     </div>
                 </div>
                 <p><button type='submit'>Login</button></p>
@@ -81,4 +83,4 @@ function IndexLogin() {
     )
 }
 
-export default IndexLogin;
+export default Login;
