@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../App.css';
 
 function RegisterNewUser() {
   const [password, setPassword] = useState();
@@ -56,9 +57,7 @@ function RegisterNewUser() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Registar Novo Utilizador</h1>
-      <p>180 Academy - a formar o futuro</p>
-      <hr />
+      <h3>Registar Novo Utilizador</h3>
       <div className='MainDivReg'>
         <div className='line1'>
           <div>
@@ -94,12 +93,12 @@ function RegisterNewUser() {
         </div>
 
         <div>
-          <label htmlFor="phone">Tipo User</label>
+          <label htmlFor="phone">Tipo de Utilizador</label>
           <select id="role" name="role" required>
             <option value="180">Administrador</option>
             <option value="admin">Empresa</option>
-            <option value="user">Funcionário</option>
             <option value="teacher">Formador</option>
+            <option value="user">Aluno</option>
           </select>
         </div>
 
@@ -122,7 +121,7 @@ function RegisterNewUser() {
         </div>
 
         <div className='btReg'>
-          <p><button className='BotaoReg' type="submit">Register Employee</button></p>
+          <p><button className='BotaoReg' type="submit">Registar</button></p>
         </div>
 
       </div>

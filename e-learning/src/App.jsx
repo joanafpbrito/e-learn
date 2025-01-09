@@ -1,17 +1,12 @@
-
 import './App.css'
-import RootLayout from './componentsRoot/RootLAyout';
+import RootLayout from './componentsRoot/RootLayout';
 import ErrorPage from './pages/ErrorPage';
-import Index180 from './pages/Index180';
-import IndexAdmin from './pages/IndexAdmin';
-import IndexLogin from './pages/IndexLogin'
-import IndexTeacher from './pages/IndexTeacher';
-import IndexUser from './pages/IndexUser';
 import Index from './pages/Index';
 import IndexModules from './pages/IndexModules';
 import IndexCourses from './pages/IndexCourses';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Login from './components/Login';
 
 const ROUTER = createBrowserRouter([
   // {path: '/', element:<IndexLogin/>},
@@ -24,15 +19,18 @@ const ROUTER = createBrowserRouter([
     loader: () => {
       return { login: localStorage.getItem('token') ? true : false};},
   children: [
-  {path: '/', element:<Index/>},  
+  {path: '/', element:<Index/>}, 
+  
   //{path: '/180', element: <Index180/>},
   //{path: '/admin', element:<IndexAdmin/>},
   //{path: '/teacher', element: <IndexTeacher/>},
   //{path: '/user', element: <IndexUser/>},
   {path: "/courses", element: <IndexCourses/>},
   {path: "/courses/modules/:id", element: <IndexModules/>},
+  
 ]},
   {path: '*', element: <ErrorPage /> },
+  {path: "/login", element: <Login/>}, 
 ])
 
 function App() {

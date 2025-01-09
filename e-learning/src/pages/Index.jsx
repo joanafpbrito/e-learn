@@ -1,5 +1,4 @@
 import Login from "../components/Login";
-import Banner from "../componentsRoot/Banner";
 import Ad180 from "../components/Ad180";
 import Admin from "../components/admin";
 import User from "../components/User";

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "../componentsRoot/Banner";
 import RegisterNewUser from "./RegisterNewUser";
+import { Link } from "react-router-dom";
 
 
 function Ad180 () {
@@ -19,7 +20,8 @@ function Ad180 () {
         <>
         <aside className="sidebar">
             <div>
-                <p onClick={showRegisterNewUser} > <strong>Register New User</strong> </p>
+                <p onClick={showRegisterNewUser} > <strong>Registar Novo Utilizador</strong> </p>
+                <Link to="/courses">Ver Cursos</Link>
                 <br />
                 <br />
                 <br />
