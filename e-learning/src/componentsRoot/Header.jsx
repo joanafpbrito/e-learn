@@ -1,6 +1,7 @@
+import '../index.css';
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import '../index.css'
 import logo180black from "../assets/logo180black.png";
 import { AiOutlineLogout } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";

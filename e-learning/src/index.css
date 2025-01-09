@@ -127,17 +127,3 @@ a:hover {
 }
 
 /** Responsividade */
-@media (min-width: 320px) and (max-width: 767px) {   
-  .header{ 
-    height: 7%; 
-  } 
-  
-  .header-icons{ 
-    gap:5px; 
-    margin-right: 5px; 
-  }
-
-  .footer p{ 
-    font-size: 8px; 
-  } 
-} 

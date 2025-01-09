@@ -1,3 +1,6 @@
+import '../App.css';
+import '../index.css';
+import WinkImage from '../assets/wink-white.png';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalError from "../componentsRoot/ModalError";
@@ -71,29 +74,47 @@ function Login() {
                 onClose={() => setShowModal(false)}
             />
         )}
-        <div className="container">
-            <div className="sideIMG">
-                <img src="src\assets\logo 180 academy sem fundo blck.png" alt="" />
-            </div>
-            <form className="LoginForm" onSubmit={handleSubmit}>
-                <h1>Bem-Vindo!</h1>
-                <h5>Faça login para dar início à sua sessão</h5>
-                <div className="innerForm">
-                    <div >
-                        <label htmlFor="email">Email</label>
-                        <input onChange={(event) => handleInputChange('email', event.target.value)}
-                            id="email" type="email" name="email" placeholder="Insira aqui o seu email" value={enteredValues.email} />
-                    </div>
-                    <div >
-                        <label htmlFor="password">Password</label>
-                        <input onChange={(event) => handleInputChange('password', event.target.value)}
-                            id="password" type="password" name="password" placeholder="Insira aqui a sua password"  value={enteredValues.password} />
-                            <p >Esqueceu a sua password? Clique aqui</p>
-                    </div>
+        <div className="containerLoginWrapper">
+                {/* Coluna de login */}
+                <div className="containerLogin">
+                    <form className="LoginForm" onSubmit={handleSubmit}>
+                        <h1>Bem-Vindo!</h1>
+                        <h5>Faça login para dar início à sua sessão</h5>
+                        <div className="innerForm">
+                            <div>
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    onChange={(event) => handleInputChange('email', event.target.value)}
+                                    id="email"
+                                    type="email"
+                                    name="email"
+                                    placeholder="Insira aqui o seu email"
+                                    value={enteredValues.email}
+                                />
+                            </div>
+                            <div>
+                                <label htmlFor="password">Password</label>
+                                <input
+                                    onChange={(event) => handleInputChange('password', event.target.value)}
+                                    id="password"
+                                    type="password"
+                                    name="password"
+                                    placeholder="Insira aqui a sua password"
+                                    value={enteredValues.password}
+                                />
+                                <p>Esqueceu a sua password? Clique aqui</p>
+                            </div>
+                        </div>
+                        <p>
+                            <button type="submit">Login</button>
+                        </p>
+                    </form>
                 </div>
-                <p><button type='submit'>Login</button></p>
-            </form>
-        </div>
+                {/* Coluna de imagem */}
+                <div className="loginImage">
+                <img src={WinkImage} alt="smile180" />
+                </div>
+            </div>
         </>
     )
 }

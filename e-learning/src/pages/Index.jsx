@@ -1,3 +1,6 @@
+import '../index.css';
+import '../App.css';
+import '../componentsRoot/rootLayout.css';
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Ad180 from "../components/Ad180";

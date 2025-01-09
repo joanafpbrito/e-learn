@@ -1,3 +1,6 @@
+import '../index.css';
+import '../App.css';
+import '../componentsRoot/rootLayout.css';
 function ErrorPage () {
     return (
        

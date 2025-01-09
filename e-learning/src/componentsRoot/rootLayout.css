@@ -1,24 +1,4 @@
-/* Reset padrão */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root{ 
-  background-image: url('src/assets/smilelogin.png'); 
-  background-size:cover;  
-} 
-
-body,
-html {
-  font-family: Arial, sans-serif;
-  height: 100%;
-  overflow: hidden; /* Evita scroll indesejado */
-
-}
-
-/* Menu lateral fixo */
+/** Sidebar */
 .sidebar {
   background-color: #222;
   color: white;
@@ -51,28 +31,7 @@ html {
   text-decoration: underline;
 }
 
-.main-content {
-  width: 100; 
-  height: 100vh; 
-  margin-top: 4%; /* Evita que o Header cubra o conteúdo */
-  margin-left: 17%; /* Evita que a Sidebar cubra o conteúdo */
-  /* padding-bottom: 6%; */ 
-  /* padding: 20px; */
-  background-color: #f4f4f4;
-  position: relative;
-  z-index: 0; /* Menor prioridade */
-  overflow: auto; /* Permite scroll se necessário */
-  box-sizing: fit-content;
-}
-
-/** Banner **/
-.banner {
-  width: 100%;
-  margin: 0px;
-}
-
 /** Fake Button**/
-
 .sidebar-button {
   background: transparent;
   border: none;
@@ -87,16 +46,3 @@ html {
   background: transparent;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Pequeno drop shadow no hover */
 }
-
-
-
-@media (min-width: 320px) and (max-width: 767px) {  
-  .sidebar{ 
-    padding: 30px; 
-    top: 5%; 
-  }
-
-  .sidebar p{ 
-    font-size: 10px;
-  } 
-} 
