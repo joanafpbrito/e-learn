@@ -1,3 +1,6 @@
+
+
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../componentsRoot/Banner";
@@ -21,7 +24,7 @@ function Admin () {
         <>
         <aside className="sidebar">
             <div>
-                <p  > <strong>Registar Novo Utilizador</strong> </p>
+                <p onClick={showRegisterNewUser} > <strong>Registar Novo Utilizador</strong> </p>
                 <br />
                 <Link to="/courses">Ver Cursos</Link>
                 <br />

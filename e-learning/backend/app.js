@@ -2,6 +2,8 @@ import fs from "node:fs/promises";
 import bodyParser from "body-parser";
 import express from "express";
 import jwt from "jsonwebtoken";
+import http from "http";
+import { Server } from "socket.io";
 
 
 const SECRET_KEY = "your_secret_key";
@@ -22,6 +24,35 @@ app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   
     next();
+});
+
+//--------------------------------------------------------------------
+
+const server = http.createServer(app);
+
+const io = new Server(server, {
+  // Configurações adicionais do Socket.IO, se necessário.
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"]
+  }
+}); // Configure o Socket.IO no servidor
+
+io.on('connection', (socket) => {
+  console.log('Usuário conectado', socket.id);
+
+  socket.on('sendMessage', (messageData) => {
+      console.log(messageData);
+      io.emit('receiveMessage', messageData); // Broadcast de mensagens
+  });
+
+  socket.on('disconnect', () => {
+      console.log('Usuário desconectado', socket.id);
+  });
+});
+
+app.get("/chat", (req, res) => {
+    res.send("Servidor está funcionando");
 });
 
 //--------------------------------------------------------------------
@@ -49,14 +80,16 @@ app.post("/login", async (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
 
-  const login = users.find((u) => u.email === email && u.password === password);
-
+  const login = users.find((u) => u.email === email);
+  
   if (!login) {
-    return res.status(422).json({
-      message: "Dados de utilizador incorretos!",
-      errors: { credentials: "E-mail ou password inválidos!" },
-    });
+    return res.status(400).json({ error: "Utilizador não encontrado." });
   }
+
+  if (login.password !== password) {
+    return res.status(400).json({ error: "Senha incorreta." });
+  }
+
 
   if (login) {
   const token = createJSONToken(email);
