@@ -1,12 +1,19 @@
 import { Link } from "react-router-dom";
-import Logout from "../components/Logout"
+import { useState } from "react";
 import "./rootLayout.css";
+import logo180black from "../assets/logo180black.png";
 import { AiOutlineLogout } from "react-icons/ai";
 import { IoSettingsOutline } from "react-icons/io5";
 import { CiUser } from "react-icons/ci";
-import logo180black from "../assets/logo180black.png";
+import { IoMdChatbubbles } from "react-icons/io";
+import Chat from "../components/Chat";
+
+
 
 function Header() {
+    const [isChatOpen, setIsChatOpen] = useState(false);
+    const toggleChat = () => setIsChatOpen(!isChatOpen);
+    
     return (
         <>
             <header className="header">
@@ -14,8 +21,10 @@ function Header() {
                 <nav className="header-icons">
                     <Link to="/"> <CiUser /> </Link>
                     <Link to="/"> <IoSettingsOutline /> </Link>
-                    <a href="/" onClick={() => Logout()}>  <AiOutlineLogout /> </a>
+                    <Link to="/logout"> <AiOutlineLogout /> </Link>
+                    <div onClick={toggleChat}> <IoMdChatbubbles size={24} /></div>
                 </nav>
+                {isChatOpen && <Chat/>}
             </header>
         </>
     )

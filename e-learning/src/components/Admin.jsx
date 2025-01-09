@@ -21,7 +21,7 @@ function Admin () {
         <>
         <aside className="sidebar">
             <div>
-                <p  > <strong>Register New User</strong> </p>
+                <p onClick={showRegisterNewUser} > <strong>Register New User</strong> </p>
                 <br />
                 <Link to="/courses">Mostrar Cursos</Link>
                 <br />

@@ -1,5 +1,5 @@
-import Login from "../components/Login";
-import Banner from "../componentsRoot/Banner";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Ad180 from "../components/Ad180";
 import Admin from "../components/admin";
 import User from "../components/User";
@@ -7,31 +7,42 @@ import Teacher from "../components/Teacher";
 
 
 function Index() {
-let loggedIn = false;
-let content;
-localStorage.getItem("role") ? loggedIn=true : loggedIn=false; 
 
-if ( localStorage.getItem("role")=== '180') {
-    content = <Ad180/>;
-} 
- if ( localStorage.getItem("role")=== 'admin') {
-    content = <Admin/>;
-} 
- if (localStorage.getItem("role") === 'user') {
-    content = <User/>;
-} 
- if ( localStorage.getItem("role")=== 'teacher') {
-    content = <Teacher/>;
-}
+    const navigate = useNavigate();
 
-console.log(content);
-console.log(loggedIn);
+    const role = localStorage.getItem("role"); 
+    const loggedIn = !!role; 
+
+    useEffect(() => {
+        if (!loggedIn) {
+            navigate("/login"); 
+        }
+    }, [loggedIn, navigate]);
+
+
+    let content;
+    switch (role) {
+        case "180":
+            content = <Ad180 />;
+            break;
+        case "admin":
+            content = <Admin />;
+            break;
+        case "user":
+            content = <User />;
+            break;
+        case "teacher":
+            content = <Teacher />;
+            break;
+        default:
+            content = null; 
+    }
 
  
     return(
         <>
 
-        {loggedIn ? content : <Login/> }
+        {loggedIn ? content : null }
         
         </>
     );

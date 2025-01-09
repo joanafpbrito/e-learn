@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ModalError from "../componentsRoot/ModalError";
 
-function IndexLogin() {
+function Login() {
+    const navigate = useNavigate();
+    const [showModal, setShowModal] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
     const [enteredValues, setEnteredValues] = useState({
         email: '',
         password: '',
     });
-
-    const navigate = useNavigate();
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -23,7 +25,11 @@ function IndexLogin() {
                 if (response.ok) {
                     return response.json();
                 } else {
-                    throw new Error("Failed to authenticate");
+                    return response.json().then(data => {
+                        throw new Error(data.error || "Falha ao autenticar");
+                    });
+
+                    
                 }
             })
 
@@ -31,20 +37,20 @@ function IndexLogin() {
                 console.log(data);
                 localStorage.setItem('token', data.token);
                 localStorage.setItem('name', data.name);
-                localStorage.setItem('role', data.role)
-                if (data.role === 'admin') {
-                    navigate('/admin');
-                }
-                if (data.role === 'user') {
-                    navigate('/user');
-                }
-                if (data.role === '180') {
-                    navigate('/180');
-                }
-                if (data.role === 'teacher') {
-                    navigate('/teacher');
-                }
+                localStorage.setItem('role', data.role);
+
+                navigate("/");
             })
+
+            .catch((error) => {
+                if (error.message.includes("Utilizador não encontrado")) {
+                    setErrorMessage("Não existe nenhum resgisto com este e-mail!");
+                } else if (error.message.includes("Senha incorreta")) {
+                    setErrorMessage("A senha está incorreta. Verifique e tente novamente.");
+                } 
+            
+                setShowModal(true);
+            });
     }
 
     function handleInputChange(identifier, value) {
@@ -57,6 +63,14 @@ function IndexLogin() {
     }
 
     return (
+        <>
+        {showModal && (
+            <ModalError
+                subtitle={"Erro"}
+                message={errorMessage}
+                onClose={() => setShowModal(false)}
+            />
+        )}
         <div className="container">
             <div className="sideIMG">
                 <img src="src\assets\logo 180 academy sem fundo blck.png" alt="" />
@@ -78,7 +92,8 @@ function IndexLogin() {
                 <p><button type='submit'>Login</button></p>
             </form>
         </div>
+        </>
     )
 }
 
-export default IndexLogin;
+export default Login;
