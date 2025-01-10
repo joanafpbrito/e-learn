@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import FakeButton from "../componentsRoot/FakeButton";
-
+import "./coursePage.css";
 
 function CoursesList() {
   const availableCourses = getAvailableCourses();
@@ -17,19 +17,16 @@ function CoursesList() {
 
   return (
     <>
-
       <aside className="sidebar">
         <div>
-          <br />
-          <FakeButton > Pesquisar por categoria </FakeButton>
-          <br />
-          <FakeButton > Pesquisar por formador </FakeButton>
-          <br />
+          <FakeButton >Pesquisar por Categoria</FakeButton>
+          <FakeButton >Pesquisar por Formador</FakeButton>
+          <FakeButton >Cursos em Destaque</FakeButton>
         </div>
       </aside>
 
-
       <div className="containerCursos">
+      <h1>Cursos em Destaque</h1>
         {availableCourses.length === 0 && <p> Não temos cursos disponíveis!</p>}
         {availableCourses.length > 0 && (
           <ul className="Courses">
@@ -37,6 +34,7 @@ function CoursesList() {
               <li key={c.id} >
                 <img onClick={() => handleSelectedCourse(c.id)} style={{ width: '200px' }} src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt} />
                 <h3>{c.title}</h3>
+                <p>{c.description}</p>
               </li>
 
             ))}

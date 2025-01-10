@@ -1,29 +1,29 @@
 [
     {
         "id": "001",
-        "title": "Curso Um",
+        "title": "Gestão de Tempo e Produtividade Pessoal",
         "image": {
           "src": "course-one.jpg",
           "alt": "Curso Um"
         },
-        "description": "O curso um é muito bom"
+        "description": "Descubra estratégias práticas para gerir melhor o tempo e aumentar a produtividade."
     },
     {
         "id": "002",
-        "title": "Curso Dois",
+        "title": "Noções Básicas de Primeiros Socorros",
         "image": {
           "src": "course-two.jpg",
           "alt": "Curso Dois"
         },
-        "description": "O curso dois é muito bom"
+        "description": "Adquira conhecimentos essenciais para agir em situações de emergência médica."
     },
     {
         "id": "003",
-        "title": "Curso Três",
+        "title": "Introdução a Bancos de Dados",
         "image": {
           "src": "course-three.jpg",
           "alt": "Curso Três"
         },
-        "description": "O curso três é muito bom"
+        "description": "Explore os fundamentos de bases de dados e aprenda a gerir informações de forma eficiente."
     }
 ]

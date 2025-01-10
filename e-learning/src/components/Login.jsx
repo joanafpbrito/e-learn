@@ -103,9 +103,7 @@ function Login() {
                                 <p>Esqueceu a sua password? Clique aqui</p>
                             </div>
                         </div>
-                        <p>
-                            <button type="submit">Entrar</button>
-                        </p>
+                        <button type="submit">Entrar</button>
                     </form>
                 </div>
                 {/* Coluna de imagem */}
