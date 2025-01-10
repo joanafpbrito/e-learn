@@ -4,7 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    background: rgba(0, 0, 0, 0.5);
+    /* Fundo semitransparente */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +21,8 @@
 }
 
 button {
-    background-color: #f44336; /* Cor de alerta */
+    background-color: #f44336;
+    /* Cor de alerta */
     color: #fff;
     border: none;
     padding: 10px;

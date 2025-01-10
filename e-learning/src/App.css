@@ -1,6 +1,6 @@
 body {
-  font-family: 'Montserrat', sans-serif; 
-  font-size: 16px; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   line-height: 1.6;
   color: #333;
   margin: 0;
@@ -9,14 +9,14 @@ body {
 }
 
 /* Container pai para alinhar lado a lado */
-.container { 
-  padding-right: 350px; 
+.container {
+  padding-right: 350px;
   display: flex;
-  justify-content: center; 
-  align-items: center;  
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   margin: 0;
-} 
+}
 
 .containerLoginWrapper {
   display: flex;
@@ -31,7 +31,8 @@ body {
   flex: 1;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 9% - 40px); /* Altura da tela menos header e footer */
+  height: calc(100vh - 9% - 40px);
+  /* Altura da tela menos header e footer */
   max-width: 400px;
   text-align: center;
 }
@@ -45,9 +46,12 @@ body {
 }
 
 .loginImage img {
-  max-width: 100%; /* Faz a imagem se ajustar à coluna */
-  height: auto; /* Mantém a proporção */
-  border-radius: 8px; /* Opcional: arredonda a imagem */
+  max-width: 100%;
+  /* Faz a imagem se ajustar à coluna */
+  height: auto;
+  /* Mantém a proporção */
+  border-radius: 8px;
+  /* Opcional: arredonda a imagem */
 }
 
 .LoginForm {
@@ -55,10 +59,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   width: 700px;
   height: 450px;
-  background-color: transparent; 
+  background-color: transparent;
   overflow: hidden;
 }
 
@@ -190,7 +194,7 @@ form h5 {
   margin-left: 15px;
 }
 
-form p{
+form p {
   padding-top: 5px;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -212,7 +216,7 @@ form ::placeholder {
 }
 
 /* Botao da pagina de login */
-form button{
+form button {
   width: 150px;
   height: 40px;
   background-color: #a7ef7a;
@@ -221,10 +225,10 @@ form button{
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-size: 14px;
-  text-align:center;
+  text-align: center;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease;
 }
 
 form button:hover {
@@ -246,10 +250,10 @@ button {
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-size: 14px;
-  text-align:center;
+  text-align: center;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease;
 }
 
 button:hover {
@@ -288,9 +292,9 @@ form select {
 }
 
 /* Botão de gerar password */
-.Gerar{ 
-  margin-top: 15px; 
-} 
+.Gerar {
+  margin-top: 15px;
+}
 
 /* Botão da div de gerar password */
 .btGerar button {
@@ -307,10 +311,10 @@ form select {
   font-family: 'Montserrat', sans-serif;
   color: black;
   font-size: 14px;
-  text-align:center;
+  text-align: center;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.3s ease; 
+  transition: background 0.3s ease;
 }
 
 btReg button:hover {
@@ -358,7 +362,7 @@ btReg button:hover {
 
 /* checkbox termos e condiçoes */
 .checkbox-item input[type="checkbox"] {
-  width: 15px; 
+  width: 15px;
   height: 15px;
   cursor: pointer;
 }
@@ -414,7 +418,8 @@ btReg button:hover {
 }
 
 .Courses li h3 {
-  font-size: 16px; /* Reduz o tamanho da fonte */
+  font-size: 16px;
+  /* Reduz o tamanho da fonte */
   color: #333;
   margin-top: 10px;
   text-align: center;
@@ -428,7 +433,8 @@ btReg button:hover {
   padding-top: 50px;
   background-color: #f4f3f2;
   width: 100%;
-  height: 100vh; /* Altura igual à altura total da janela */
+  height: 100vh;
+  /* Altura igual à altura total da janela */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -444,4 +450,3 @@ p {
   height: 500px;
   width: auto;
 }
-

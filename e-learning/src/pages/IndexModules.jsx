@@ -4,12 +4,12 @@ import '../index.css';
 import '../App.css';
 import '../componentsRoot/rootLayout.css';
 
-function IndexModules () {
+function IndexModules() {
     let params = useParams();
-  
+
     return (
         <>
-        <CoursePage id = {params.id}/>
+            <CoursePage id={params.id} />
         </>
     )
 }

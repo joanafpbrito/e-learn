@@ -31,8 +31,6 @@ function Login() {
                     return response.json().then(data => {
                         throw new Error(data.error || "Falha ao autenticar");
                     });
-
-                    
                 }
             })
 
@@ -50,8 +48,8 @@ function Login() {
                     setErrorMessage("Não existe nenhum resgisto com este e-mail!");
                 } else if (error.message.includes("Senha incorreta")) {
                     setErrorMessage("A senha está incorreta. Verifique e tente novamente.");
-                } 
-            
+                }
+
                 setShowModal(true);
             });
     }
@@ -67,14 +65,14 @@ function Login() {
 
     return (
         <>
-        {showModal && (
-            <ModalError
-                subtitle={"Erro"}
-                message={errorMessage}
-                onClose={() => setShowModal(false)}
-            />
-        )}
-        <div className="containerLoginWrapper">
+            {showModal && (
+                <ModalError
+                    subtitle={"Erro"}
+                    message={errorMessage}
+                    onClose={() => setShowModal(false)}
+                />
+            )}
+            <div className="containerLoginWrapper">
                 {/* Coluna de login */}
                 <div className="containerLogin">
                     <form className="LoginForm" onSubmit={handleSubmit}>
@@ -112,7 +110,7 @@ function Login() {
                 </div>
                 {/* Coluna de imagem */}
                 <div className="loginImage">
-                <img src={WinkImage} alt="smile180" />
+                    <img src={WinkImage} alt="smile180" />
                 </div>
             </div>
         </>

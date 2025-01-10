@@ -9,13 +9,10 @@ import { LuCircleUserRound } from "react-icons/lu";
 import { RiChat3Line } from "react-icons/ri";
 import Chat from "../components/Chat";
 
-
-
-
 function Header() {
     const [isChatOpen, setIsChatOpen] = useState(false);
     const toggleChat = () => setIsChatOpen(!isChatOpen);
-    
+
     return (
         <>
             <header className="header">
@@ -26,7 +23,7 @@ function Header() {
                     <Link to="/"> <IoSettingsOutline /> </Link>
                     <Link to="/logout"> <AiOutlineLogout /> </Link>
                 </nav>
-                {isChatOpen && <Chat/>}
+                {isChatOpen && <Chat />}
             </header>
         </>
     )

@@ -109,22 +109,22 @@ function RegisterNewUser() {
           </>
         )}
       </div>
-        <div className="checkbox-item">
-          <label>
-            <input type="checkbox" id="newsletter-consent" name="newsletter-consent" />Li e aceito prestar o meu consentimento para o envio de newsletters (opcional)
-          </label>
-          <label>
-            <input type="checkbox" id="privacy-policy" name="privacy-policy" required/>Li e compreendi a Política de Privacidade
-          </label>
-          <label>
-            <input type="checkbox" id="terms-conditions" name="terms-conditions" required/>Li, compreendi e aceito os Termos e Condições
-          </label>
-        </div>
+      <div className="checkbox-item">
+        <label>
+          <input type="checkbox" id="newsletter-consent" name="newsletter-consent" />Li e aceito prestar o meu consentimento para o envio de newsletters (opcional)
+        </label>
+        <label>
+          <input type="checkbox" id="privacy-policy" name="privacy-policy" required />Li e compreendi a Política de Privacidade
+        </label>
+        <label>
+          <input type="checkbox" id="terms-conditions" name="terms-conditions" required />Li, compreendi e aceito os Termos e Condições
+        </label>
+      </div>
       <div className='btReg'>
-        <p><button className='BotaoReg' type="submit">Registar</button></p>
+        <p><button className='BotaoReg' type="submit">Criar Registo</button></p>
       </div>
     </form>
-    
+
   );
 }
 

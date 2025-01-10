@@ -10,7 +10,7 @@ function CoursesList() {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const navigate = useNavigate();
 
-  function handleSelectedCourse (courseId) {
+  function handleSelectedCourse(courseId) {
     setSelectedCourse(courseId);
     navigate(`/courses/modules/${courseId}`);
   };
@@ -19,13 +19,13 @@ function CoursesList() {
     <>
 
       <aside className="sidebar">
-          <div>
-              <br />
-              <FakeButton > Pesquisar por categoria </FakeButton>
-              <br />
-              <FakeButton > Pesquisar por formador </FakeButton>
-              <br /> 
-          </div>
+        <div>
+          <br />
+          <FakeButton > Pesquisar por categoria </FakeButton>
+          <br />
+          <FakeButton > Pesquisar por formador </FakeButton>
+          <br />
+        </div>
       </aside>
 
 
