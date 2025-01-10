@@ -1,3 +1,4 @@
+/**Pag descriçao de cada modulo */
 .video-container {
     margin: 20px 0;
     border-radius: 8px;
@@ -29,6 +30,9 @@
     font-size: 32px;
     font-weight: 500;
 }
+
+
+
 
 /** Pag descrição do curso 1 */
 .coursesDescription{
