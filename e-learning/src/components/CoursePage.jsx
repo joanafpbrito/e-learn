@@ -79,7 +79,7 @@ function CoursePage(props) {
                             </video>
                         </div>
                     )}
-                    <p>{selectedModule.text}</p>
+                    <p style={{fontSize: "16px", fontWeight: "500",textAlign:"justify" ,color: "black",  marginLeft: "80px", marginRight:"90px"}} >{selectedModule.text}</p>
                 </div>
             )}
         </>
