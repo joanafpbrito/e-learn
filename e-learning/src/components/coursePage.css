@@ -26,3 +26,81 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
+
+/** Cursos em Destaque*/
+.containerCursos h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #008013;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/** Cursos */
+/*div dos cursos*/
+.containerCursos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    margin-top: 50px;
+  }
+  
+  /*cards lista de cursos*/
+  .Courses {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+  }
+  
+  .Courses li {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .Courses li:hover {
+    transform: translateY(-5px);
+  }
+  
+  .Courses li img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .Courses li h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* Estilo da descrição */
+.Courses li p {
+    font-size: 12px;
+    color: #555;
+    padding: 0 10px;
+    text-align: justify;
+    line-height: 1.5;
+}

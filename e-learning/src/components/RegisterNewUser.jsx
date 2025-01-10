@@ -58,7 +58,7 @@ function RegisterNewUser() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="formRegisto">
       <h1>Registo</h1>
       <h5>Faça o registo de um novo utilizador</h5>
       <div>
