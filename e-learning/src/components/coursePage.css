@@ -27,6 +27,26 @@
     font-size: 1.5rem;
 }
 
+/** Pag descrição do curso 1 */
+.coursesDescription{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 50px;
+
+}
+
+.coursesDescription h1{
+  font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #008013;
+    margin-top: 15px;
+    text-align: left;
+}
+
 /** Cursos em Destaque*/
 .containerCursos h1 {
     font-family: 'Montserrat', sans-serif;
@@ -83,7 +103,7 @@
   
   .Courses li img {
     width: 100%;
-    height: 200px; 
+    height: auto;
     object-fit: cover;
     border-bottom: 2px solid #ddd;
   }

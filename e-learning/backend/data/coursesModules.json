@@ -2,9 +2,9 @@
     {
         "id-course": "001",
         "id-mod": "01",
-        "mod": "Módulo 1",
-        "subtitle": "Tratamento de Feridas",
-        "text": "BLABLABLA",
+        "mod": "Módulo 1: Fundamentos da Gestão de Tempo",
+        "subtitle": "Os Pilares do Tempo Bem Gerido",
+        "text": "Neste módulo, irá aprender os princípios básicos da gestão de tempo, incluindo a importância de definir prioridades, entender os seus padrões de produtividade e identificar hábitos que sabotam a sua eficiência. Descubra como um bom planeamento é a chave para alcançar mais com menos stress.",
         "video": {
             "src":"/data/courses-videos/course-one.mp4"
                 }
@@ -12,9 +12,9 @@
     {
         "id-course": "001",
         "id-mod": "02",
-        "mod": "Módulo 2",
-        "subtitle": "Reanimação",
-        "text": "BLABLABLA",
+        "mod": "Módulo 2: Estabelecimento de Prioridades",
+        "subtitle": "Fazer o Importante Antes do Urgente",
+        "text": "Aprenda a distinguir entre tarefas importantes e urgentes, utilizando ferramentas como a Matriz de Eisenhower. Este módulo ajudá-lo-á a priorizar o que realmente importa e evitar ser sugado por atividades que drenam o seu tempo e energia.",
         "video": {
             "src":"courses-videos/course-one.mp4"
                 }
@@ -22,9 +22,9 @@
     {
         "id-course": "001",
         "id-mod": "03",
-        "mod": "Módulo 3",
-        "subtitle": "Sistema integrado de Emergência Médica",
-        "text": "BLABLABLA",
+        "mod": "Módulo 3: Planeamento Eficaz",
+        "subtitle": "Transforme Planos em Resultados",
+        "text": "Descubra como criar um planeamento semanal e diário que funcione. Este módulo irá guiá-lo na utilização de técnicas como o time blocking, listas de tarefas eficazes e métodos para alinhar o planeamento com os seus objetivos de longo prazo.",
         "video": {
             "src":"courses-videos/course-one.mp4"
                 }
