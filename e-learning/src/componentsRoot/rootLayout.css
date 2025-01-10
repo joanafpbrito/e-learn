@@ -1,8 +1,10 @@
-body, html { 
-  font-family: 'Montserrat', sans-serif; 
-  height: 100%; 
-  overflow: hidden; /* Evita scroll indesejado */ 
-  } 
+body,
+html {
+  font-family: 'Montserrat', sans-serif;
+  height: 100%;
+  overflow: hidden;
+  /* Evita scroll indesejado */
+}
 
 /** Sidebar */
 .sidebar {
@@ -54,16 +56,16 @@ body, html {
 }
 
 /** Tudo geral + Banner */
-.main-content{
+.main-content {
   margin-top: 40px;
   margin-left: 200px;
   padding-top: 20px;
   height: calc(100vh - 40px);
   background-color: #f4f3f2;
-  position: relative; 
+  position: relative;
   z-index: 0;
   overflow: auto;
-  box-sizing: fit-content; 
+  box-sizing: fit-content;
 }
 
 /**Banner */
@@ -114,5 +116,3 @@ body, html {
   font-weight: 300;
   color: white;
 }
-
-/* ---------------------------------------------------------------------------------------------------------------------------------------------------- */

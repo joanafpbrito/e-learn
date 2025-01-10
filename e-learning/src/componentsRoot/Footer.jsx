@@ -1,10 +1,10 @@
 import '../index.css'
 
-function Footer () {
+function Footer() {
     return (
-        <footer className= "footer">
+        <footer className="footer">
             <p>© 180 Consulting | 180 Academy | CESAE Digital | Todos os direitos reservados | Desenvolvido por J2PB</p>
-            
+
         </footer>
     )
 }

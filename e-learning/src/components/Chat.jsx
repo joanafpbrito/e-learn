@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { io } from "socket.io-client";
-import './chat.css';  
+import './chat.css';
 
 function Chat() {
     const [messages, setMessages] = useState([]);
@@ -11,30 +11,30 @@ function Chat() {
 
     useEffect(() => {
         socketRef.current = io("http://localhost:3700/chat");
-        
+
         socketRef.current.on('receiveMessage', (messageData) => {
             setMessages((prevMessages) => [...prevMessages, messageData]);
         });
-        
+
 
         return () => {
             socketRef.current.disconnect();
         };
     }, []);
 
-    
-    function sendMessage (event) {
+
+    function sendMessage(event) {
         event.preventDefault();
-        
+
         const messageData = {
             text: messageInput,
             user: user,
             timestamp: new Date().toISOString(),
         };
 
-        socketRef.current.emit("sendMessage", messageData); 
+        socketRef.current.emit("sendMessage", messageData);
 
-        setMessageInput(""); 
+        setMessageInput("");
     };
 
     return (

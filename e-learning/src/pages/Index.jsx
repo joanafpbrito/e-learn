@@ -13,12 +13,12 @@ function Index() {
 
     const navigate = useNavigate();
 
-    const role = localStorage.getItem("role"); 
-    const loggedIn = !!role; 
+    const role = localStorage.getItem("role");
+    const loggedIn = !!role;
 
     useEffect(() => {
         if (!loggedIn) {
-            navigate("/login"); 
+            navigate("/login");
         }
     }, [loggedIn, navigate]);
 
@@ -38,15 +38,15 @@ function Index() {
             content = <Teacher />;
             break;
         default:
-            content = null; 
+            content = null;
     }
 
- 
-    return(
+
+    return (
         <>
 
-        {loggedIn ? content : null }
-        
+            {loggedIn ? content : null}
+
         </>
     );
 }

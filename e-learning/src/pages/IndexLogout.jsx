@@ -3,9 +3,9 @@ import '../App.css';
 import '../componentsRoot/rootLayout.css';
 import Logout from "../components/Logout";
 
-function IndexLogout () {
-    return(
-        <Logout/>
+function IndexLogout() {
+    return (
+        <Logout />
     )
 }
 
