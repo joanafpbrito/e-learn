@@ -79,7 +79,7 @@ function CoursePage(props) {
                             </video>
                         </div>
                     )}
-                    <h1>{selectedModule.text}</h1>
+                    <p>{selectedModule.text}</p>
                 </div>
             )}
         </>
