@@ -11,12 +11,14 @@ import courseOneImage from '../../backend/data/front-image-courses/course-one.jp
 
 function CoursePage(props) {
     const [selectedModule, setSelectedModule] = useState();
+    const [start, setStart] = useState(true);
     const details = getCourseDetails();
     const filteredDetails = details.filter((m) => m["id-course"] == props.id);
 
     function handleSelectedModule(moduleId) {
         const selectedModuleData = filteredDetails.find((m) => m["id-mod"] === moduleId);
         setSelectedModule(selectedModuleData);
+        setStart(false);
     };
 
     return (
@@ -31,6 +33,8 @@ function CoursePage(props) {
                 ))}
             </aside>
 
+            {start && (
+                <div>
             <div className="coursesDescription">
                 <h2 style={{fontSize: "32px", fontWeight: "500", color: "#008013", textAlign: "left", marginLeft: "400px", marginBottom: '20px',}}>Gestão de Tempo e Produtividade Pessoal</h2>
                 <img 
@@ -55,6 +59,8 @@ function CoursePage(props) {
             </div>
 
             <h1 className="coursesDescription"></h1>
+            </div>
+        )}
 
             {selectedModule && (
                 <div className="module-content">
@@ -66,7 +72,7 @@ function CoursePage(props) {
                                 src={selectedModule["id-mod"] === "01" ? courseVideo1
                                     : selectedModule["id-mod"] === "02" ? courseVideo2
                                         : selectedModule["id-mod"] === "03" ? courseVideo3
-                                            : null}
+                                        : null }
                                 onError={(e) => console.error('Video Error:', e)}
                             >
                                 O seu browser não suporta este vídeo.
