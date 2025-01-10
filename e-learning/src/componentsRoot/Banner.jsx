@@ -30,6 +30,9 @@ function Banner() {
                     <img src="src\assets\wink-white.png" alt="" />
                 </div>
             </div>
+            <div >
+                    <img style={{width: '100%'}} src="src\assets\imagem.png" alt="" />
+            </div>
         </>
     )
 }
