@@ -32,7 +32,7 @@ function CoursesList() {
           <ul className="Courses">
             {availableCourses.map((c) => (
               <li key={c.id} >
-                <img onClick={() => handleSelectedCourse(c.id)} style={{ width: '200px' }} src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt} />
+                <img onClick={() => handleSelectedCourse(c.id)}  src={`http://localhost:3700/${c.image.src}`} alt={c.image.alt} />
                 <h3>{c.title}</h3>
                 <p>{c.description}</p>
               </li>
