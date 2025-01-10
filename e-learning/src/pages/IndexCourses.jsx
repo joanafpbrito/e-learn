@@ -1,5 +1,6 @@
 import '../index.css';
 import '../App.css';
+import '../components/chat.css';
 import '../componentsRoot/rootLayout.css';
 import { useParams } from "react-router-dom";
 import CoursesList from "../components/CoursesList";
