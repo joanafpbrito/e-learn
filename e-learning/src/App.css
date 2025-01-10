@@ -66,12 +66,16 @@ body {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  font-size: 3rem;
+  font-weight: 500;
 }
 
 .LoginForm h5 {
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .LoginForm p {
@@ -133,11 +137,11 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   width: 100%;
   height: fit-content;
-  background-color: #FFFFFF;
   margin-top: 15px;
+  margin-left: 150px;
 }
 
 form label {
@@ -156,7 +160,7 @@ form label {
 
 form input {
   width: 220px;
-  height: 20px;
+  height: 10px;
   padding: 10px;
   border: 1px solid #333;
   font-family: 'Montserrat', sans-serif;
@@ -166,6 +170,34 @@ form input {
   margin-left: 15px;
   margin-bottom: 7px;
   transition: border-color 0.3s;
+}
+
+form h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  color: #008013;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+form h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #008013;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+form p{
+  padding-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  margin-top: 5px;
+  margin-left: 15px;
 }
 
 .form input:focus {
@@ -183,7 +215,7 @@ form ::placeholder {
 form button{
   width: 150px;
   height: 40px;
-  background-color: #A7EF7A;
+  background-color: #a7ef7a;
   border: none;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -196,26 +228,24 @@ form button{
 }
 
 form button:hover {
-  background: #329933;
-  color: white
+  color: white;
+  background-color: #6be32b;
 }
 
 form button:active {
   transform: scale(0.98);
 }
 
-
 /* este botao nao é do login */
 button {
   width: 150px;
   height: 40px;
-  background-color: #A7EF7A;
+  background-color: #a7ef7a;
   border: none;
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: black;
   font-size: 14px;
-  font-weight: bold;
   text-align:center;
   cursor: pointer;
   margin-top: 10px;
@@ -223,12 +253,15 @@ button {
 }
 
 button:hover {
-  background: #329933;
+  color: white;
+  background-color: #6be32b;
 }
 
 button:active {
   transform: scale(0.98);
 }
+
+/** Registo Utilizador */
 
 /* class para os selectors (tipo user) */
 form select {
@@ -240,45 +273,13 @@ form select {
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ------------------------------------------------------------------------------------------------------------------------------------------------- */
-
-/** Registo Utilizador */
-.MainDivReg {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.line1 {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  margin: 0;
-}
-
-.line2 {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  margin: 0;
-}
-
-.line3 {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
-  margin: 0;
-}
-
 .DivGerar {
   display: flex;
   flex-direction: row;
   margin: 0;
 }
 
+/*Div gerar password */
 .btGerar {
   display: flex;
   flex-direction: row;
@@ -286,20 +287,38 @@ form select {
   justify-content: center;
 }
 
+/* Botão de gerar password */
 .Gerar{ 
   margin-top: 15px; 
 } 
 
+/* Botão da div de gerar password */
 .btGerar button {
   font-size: 14px;
 }
 
+/* Botão de registo */
 .btReg button {
-  height: 35px;
-  width: 120px;
+  width: 150px;
+  height: 40px;
+  background-color: #a7ef7a;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
   font-size: 14px;
+  text-align:center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease; 
 }
 
+btReg button:hover {
+  background: #6be32b;
+  color: white;
+}
+
+/* Div password gerada */
 .containerPass {
   display: flex;
   align-items: center;
@@ -311,6 +330,7 @@ form select {
   padding-left: 10px;
 }
 
+/*input radio*/
 .line4 {
   display: flex;
   flex-direction: row;
@@ -323,6 +343,7 @@ form select {
   width: 15px;
 }
 
+/*input checkbox*/
 .line5 {
   display: flex;
   flex-direction: row;
@@ -333,6 +354,13 @@ form select {
 .line5 input {
   height: 15px;
   width: 15px;
+}
+
+/* checkbox termos e condiçoes */
+.checkbox-item input[type="checkbox"] {
+  width: 15px; 
+  height: 15px;
+  cursor: pointer;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------------- */

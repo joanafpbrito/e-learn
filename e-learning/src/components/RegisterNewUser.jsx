@@ -59,33 +59,18 @@ function RegisterNewUser() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Registar Novo Utilizador</h3>
-      <div className='MainDivReg'>
-        <div className='line1'>
-          <div>
-            <label htmlFor="company">Empresa</label>
-            <input type="text" id="company" name="company" required />
-          </div>
-          <div>
-            <label htmlFor="department">Departamento</label>
-            <input type="text" id="department" name="department" />
-          </div>
-        </div>
-
-        <div className='line2'>
-          <div>
-            <label htmlFor="first-name">Primeiro Nome</label>
-            <input type="text" id="first-name" name="first-name" required />
-          </div>
-          <div>
-            <label htmlFor="last-name">Último Nome</label>
-            <input type="text" id="last-name" name="last-name" required />
-          </div>
-        </div>
-
+      <h1>Registo</h1>
+      <h5>Faça o registo de um novo utilizador</h5>
+      <div>
+        <label htmlFor="company">Nome Completo</label>
+        <input type="text" id="name" name="name" required />
+        <label htmlFor="company">Nome de Utilizador</label>
+        <input type="text" id="username" name="username" required />
+        <label htmlFor="company">Email</label>
+        <input type="email" id="email" name="email" required />
         <div className='DivGerar'>
           <div>
-            <label htmlFor="email">E-mail</label>
+            <label htmlFor="email">Password</label>
             <input id="email" type="email" name="email" required />
           </div>
           <div className='btGerar'>
@@ -93,46 +78,53 @@ function RegisterNewUser() {
             <label htmlFor="password"> <button className="Gerar" type="button" onClick={() => generatePassword()}>Gerar Password</button> </label>
           </div>
         </div>
-
         {role == "180" && (
-        <>
-        <div>
-          <label htmlFor="phone">Tipo de Utilizador</label>
-          <select id="role" name="role" required>
-            <option value="180">Administrador</option>
-            <option value="admin">Empresa</option>
-            <option value="teacher">Formador</option>
-            <option value="user">Aluno</option>
-          </select>
-        </div>
-
-        <div className='line4'>
-          <p>Pode registar novos utilizadores?</p>
-          <label htmlFor="able-to-register">
-            <input type="checkbox" id="able-to-register" name="able-to-register" value="yes" />Sim
-          </label>
-          <label htmlFor="able-to-register">
-            <input type="checkbox" id="able-to-register" name="able-to-register" value="no" />Não
-          </label>
-        </div>
-        <div className='line5'>
-          <p>Quantos?</p>
-          {[5, 10, 15, 20, 25].map((limit) => (
-            <label key={limit}>
-              <input type="radio" id="how-many" name="how-many" value={limit} onChange={handleCheckboxChange} /> {limit}
-            </label>
-          ))}
-        </div>
-        </>
+          <>
+            <div className='line4'>
+              <label htmlFor="role">Tipo de Utilizador:</label>
+              <select id="role" name="role" required>
+                <option value="180">Administrador</option>
+                <option value="admin">Empresa</option>
+                <option value="teacher">Formador</option>
+                <option value="user">Aluno</option>
+              </select>
+            </div>
+            <div className='line4'>
+              <p>Pode registar novos utilizadores?</p>
+              <label htmlFor="able-to-register">
+                <input type="radio" id="able-to-register" name="able-to-register" value="yes" />Sim
+              </label>
+              <label htmlFor="able-to-register">
+                <input type="radio" id="able-to-register" name="able-to-register" value="no" />Não
+              </label>
+            </div>
+            <div className='line5'>
+              <p>Quantos?</p>
+              {[5, 10, 15, 20, 25].map((limit) => (
+                <label key={limit}>
+                  <input type="checkbox" id="how-many" name="how-many" value={limit} onChange={handleCheckboxChange} /> {limit}
+                </label>
+              ))}
+            </div>
+          </>
         )}
-       
-
-        <div className='btReg'>
-          <p><button className='BotaoReg' type="submit">Registar</button></p>
+      </div>
+        <div className="checkbox-item">
+          <label>
+            <input type="checkbox" id="newsletter-consent" name="newsletter-consent" />Li e aceito prestar o meu consentimento para o envio de newsletters (opcional)
+          </label>
+          <label>
+            <input type="checkbox" id="privacy-policy" name="privacy-policy" required/>Li e compreendi a Política de Privacidade
+          </label>
+          <label>
+            <input type="checkbox" id="terms-conditions" name="terms-conditions" required/>Li, compreendi e aceito os Termos e Condições
+          </label>
         </div>
-
+      <div className='btReg'>
+        <p><button className='BotaoReg' type="submit">Registar</button></p>
       </div>
     </form>
+    
   );
 }
 
