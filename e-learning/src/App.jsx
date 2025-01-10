@@ -30,7 +30,7 @@ const ROUTER = createBrowserRouter([
       //{path: '/teacher', element: <IndexTeacher/>},
       //{path: '/user', element: <IndexUser/>},
       { path: "/courses", element: <IndexCourses /> },
-      { path: "/courses/modules/:id", element: <IndexModules /> },
+      { path: "/courses/:id", element: <IndexModules /> },
 
     ]
   },

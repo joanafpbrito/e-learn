@@ -12,7 +12,7 @@ function CoursesList() {
 
   function handleSelectedCourse(courseId) {
     setSelectedCourse(courseId);
-    navigate(`/courses/modules/${courseId}`);
+    navigate(`/courses/${courseId}`);
   };
 
   return (
